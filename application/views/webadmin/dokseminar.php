@@ -25,7 +25,7 @@
         <h1 class="h5 mb-0 text-gray-800">Ilmu Komputer</h1>
     </div>
 
-    <div class="row" style="padding:36px;">
+    <div class="row">
         <div class="col-xl-6 col-md-4 mb-4">
             <div class="mb-3">
             <label for="formFile" class="form-label">Dokumen Proposal Tugas Akhir</label>

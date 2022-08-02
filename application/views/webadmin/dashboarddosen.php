@@ -30,6 +30,7 @@
 							<th><span>Nim</span></th>
 							<th class="text-center"><span>Angkatan</span></th>
 							<th>Action</th>
+							<th>&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -45,6 +46,9 @@
 							</td>
 							<td style="width: 20%;">
                                 <button type="button" class="btn btn-primary">Lihat</button>
+							</td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
 						</tr
 					</tbody>

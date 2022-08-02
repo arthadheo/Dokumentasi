@@ -28,8 +28,38 @@
     <div class="row" style="padding:36px;">
         <div class="col-xl-6 col-md-4 mb-4">
             <div class="mb-3">
-            <label for="formFile" class="form-label">Dokumen Proposal Tugas Akhir</label>
+            <label for="formFile" class="form-label">Laporan Tugas Akhir</label>
             <input class="form-control" type="file" id="formFile1">
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-4 mb-4">
+            <div class="mb-3">
+            <label for="formFile" class="form-label">Transkrip Mahasiswa (Tanpa ttd kaprodi)</label>
+            <input class="form-control" type="file" id="formFile2">
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-4 mb-4">
+            <div class="mb-3">
+            <label for="formFile" class="form-label">Bukti Bimbingan</label>
+            <input class="form-control" type="file" id="formFile3">
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-4 mb-4">
+            <div class="mb-3">
+            <label for="formFile" class="form-label">Berita Acara Seminar Kemajuan</label>
+            <input class="form-control" type="file" id="formFile4">
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-4 mb-4">
+            <div class="mb-3">
+            <label for="formFile" class="form-label">Form Pendaftaran Sidang Tugas Akhir</label>
+            <input class="form-control" type="file" id="formFile5">
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-4 mb-4">
+            <div class="mb-3">
+            <label for="formFile" class="form-label">Form Keterangan Bebas Pinjam Laboratorium</label>
+            <input class="form-control" type="file" id="formFile6">
             </div>
         </div>
     </div>
