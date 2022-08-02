@@ -1,5 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dokumen Seminar</title>
+
+    <!-- Custom fonts for this template-->
+</head>
+<body>
 <div style="padding: 24px;">
-    <div class="d-sm-flex justify-content-between" style="padding: 12px;">
+    <div class="d-sm-flex justify-content-between">
         <h1 class="h5 mb-0 text-gray-800">Dheo Artha</h1>
     </div>
     <div class="d-sm-flex justify-content-between">
@@ -18,3 +34,8 @@
         </div>
     </div>
 </div>
+
+
+</body>
+
+</html>

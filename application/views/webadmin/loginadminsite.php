@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Web Admin Mangsi</title>
+    <title>Login</title>
 
     <!-- Custom fonts for this template-->
 <link href="<?php echo base_url() ?>assets_admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,15 +33,13 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block ">
-                                <img src="<?php echo base_url(); ?>assets_admin/img/Mangsi-Logo.jpg" alt="Logo Mangsi">
+                                <img style="padding: 30px;" src="<?php echo base_url(); ?>assets_admin/img/Universitas-pertamina.png" alt="Logo Universitas Pertamina">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Masuk</h1>
+                                        <h1 class="h2 text-gray-900 mb-4">Masuk</h1>
                                     </div>
-                                    <!-- <?php echo $this->session->flashdata('message')?> -->
-                                    <form method="POST", class="user" action="<?php echo base_url('LoginAdmin/login') ?>">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 name="email_pegawai"
