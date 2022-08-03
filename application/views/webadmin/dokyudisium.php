@@ -24,105 +24,310 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h5 mb-0 text-gray-800">Ilmu Komputer</h1>
     </div>
-
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Berita Acara Sidang Tugas Akhir</label>
-            <input class="form-control" type="file" id="formFile1">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+            <div>
+                <thead><h4  class="text-center" style="padding-bottom:15px;">Dokumen Yudisium</h4></thead>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Revisi Laporan Tugas Akhir</label>
-            <input class="form-control" type="file" id="formFile2">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Surat Keterangan Perbaikan Tugas Akhir</label>
-            <input class="form-control" type="file" id="formFile3">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Transkrip Mahasiswa 144 SKS</label>
-            <input class="form-control" type="file" id="formFile4">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Transkrip PEM Minimum 1300 (Dengan TTD Kaprodi)</label>
-            <input class="form-control" type="file" id="formFile5">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">sertifikat TOEFL Minimum 475</label>
-            <input class="form-control" type="file" id="formFile6">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Surat Keterangan Bebas Pustaka </label>
-            <input class="form-control" type="file" id="formFile7">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Surat Keterangan Bebas Aset</label>
-            <input class="form-control" type="file" id="formFile8">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Surat Keterangan Lunas SPP</label>
-            <input class="form-control" type="file" id="formFile9">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Foto Hitam Putih 4 x 6</label>
-            <input class="form-control" type="file" id="formFile10">
-            </div>
-        </div>
-    </div>
-    <div class="row"">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Formulir Pendaftaran Yudisium</label>
-            <input class="form-control" type="file" id="formFile11">
-            </div>
-        </div>
-    </div>
-    <div class="row"">
-        <div class="col-xl-6 col-md-4 mb-4">
-            <div class="mb-3">
-            <label for="formFile" class="form-label">Kartu Keluarga</label>
-            <input class="form-control" type="file" id="formFile12">
-            </div>
-        </div>
-    </div>
+			<div class="table-responsive">
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th class="text-center"><span>Judul Dokumen</span></th>
+							<th class="text-center"><span>Deadline</span></th>
+							<th class="text-center"><span>Upload</span></th>
+                            <th class="text-center"><span>Download</span></th>
+                            <th class="text-center"><span>Send Date</span></th>
+                            <th class="text-center"><span>Status</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                            <td class="text-center">
+								<span class="label label-success">BA Sidang Tugas Akhir</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile1">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Revisi Laporan Tugas Akhir</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile2">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Surat Keterangan Perbaikan Tugas Akhir</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile3">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Transkrip Mahasiswa 144 SKS</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Transkrip PEM Minimum 1300 (ttd kaprodi)</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Sertifikat TOEFL Minimum 475</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Surat Keterangan Bebas Pustaka</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Surat Keterangan Bebas Aset</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Surat Keterangan Lunas SPP</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Foto Hitam Putih 4 x 6</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Formulir Pendaftaran Yudisium</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+								<span class="label label-success">Kartu Keluarga</span>
+							</td>
+							<td class="text-center">
+								<span class="label label-success">25/12/2022</span>
+							</td>
+							<td class="text-center">
+                                <input class="form btn" type="file" id="formFile4">
+							</td>
+							<td class="text-center">
+								<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+							</td>
+                            <td class="text-center">
+                                <span class="label label-success">20/12/2022</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="label label-success">In Progress</span>
+                            </td>
+							<td>
+								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							</td>
+                        </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
-
+</div>
 
 </body>
 

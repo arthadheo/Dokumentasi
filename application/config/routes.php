@@ -52,3 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['dashboard'] = 'Dashboard/index';
+$route['dashboard-admin'] = 'DashboardAdmin/index';
+$route['dashboard-dosen'] = 'DashboardDosen/index';
+$route['dok-proposal'] = 'DokProposal/index';
+$route['dok-seminar'] = 'DokSeminar/index';
+$route['dok-sidang'] = 'DokSidang/index';
+$route['dok-yudisium'] = 'DokYudisium/index';
+$route['login'] = 'LoginAdmin/index';
+
+
+
