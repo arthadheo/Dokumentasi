@@ -53,6 +53,9 @@
                                             <button class="btn btn-primary btn-user btn-block" type="submit">Login</button>
                                         </div>
                                     <hr>
+                                    <a href="<?php echo base_url(); ?>dashboard">
+                                        <div class="text-center">kembali ke dashboard</div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

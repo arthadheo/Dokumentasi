@@ -15,9 +15,6 @@
         <span>Dashboard</span></a>
 </li>
 
-<!-- Divider -->
-<hr class="sidebar-divider">
-
 <!-- Heading -->
 <div class="sidebar-heading">
     Menu Pendaftaran
@@ -27,24 +24,10 @@
 
 <!-- Nav Item - Charts -->
 <li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>dok-proposal">
-        <span>Proposal Tugas Akhir</span></a>
+    <a class="nav-link" href="<?php echo base_url(); ?>admin-validasi">
+        <span>Admin Validasi</span></a>
 </li>
 
-<li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>dok-seminar">
-        <span>Seminar Kemajuan Tugas Akhir</span></a>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>dok-sidang">
-        <span>Sidang Tugas Akhir</span></a>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>dok-yudisium">
-        <span>Yudisium</span></a>
-</li>
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">

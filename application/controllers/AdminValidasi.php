@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DashboardAdmin extends CI_Controller {
+class AdminValidasi extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,8 +20,8 @@ class DashboardAdmin extends CI_Controller {
 	 */
 	public function index()
 	{
-        $this->load->view('template_admin/header');
-		$this->load->view('webadmin/dashboardadmin');
+        $this->load->view('template_admin/headeradmin');
+		$this->load->view('webadmin/adminvalidasi');
         $this->load->view('template_admin/footer');
 	}
 }
