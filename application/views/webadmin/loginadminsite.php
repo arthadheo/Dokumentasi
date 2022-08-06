@@ -39,16 +39,20 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h2 text-gray-900 mb-4">Masuk</h1>
+                                        <?php if($this->session->flashdata('message_login_error')): ?>
+                                            <div class="invalid-feedback">
+                                                    <?php $this->session->flashdata('message_login_error') ?>
+                                            </div>
+                                        <?php endif ?>
                                     </div>
-                                    <form method="POST", class="user" action="<?php echo base_url('webadmin/loginadminsite') ?>">
+                                    <form method="POST", class="user" action="">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                name="Email-mahasiwa"
-                                                placeholder="Enter Email Address...">
+                                            <input type="email" class="form-control form-control-user <?php form_error('email') ? 'invalid' : '' ?>" value="<?php set_value('email') ?>"
+                                                name="email" placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                name="Password-mahasiswa" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user <?php form_error('password') ? 'invalid' : '' ?>" value="<?php set_value('password') ?>"
+                                                name="password" placeholder="Password">
                                         </div>
                                         <div class="p-t-15">
                                             <button class="btn btn-primary btn-user btn-block" type="submit">Login</button>

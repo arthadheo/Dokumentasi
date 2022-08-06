@@ -19,17 +19,20 @@ class DokProposal extends CI_Controller {
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
 	public function __construct()
-    {
-        parent::__construct();
-        $this->load->model('Auth_model');
+	{
+		parent::__construct();
+		$this->load->model('auth_model');
+		if(!$this->auth_model->current_user()){
+			redirect('auth/login');
+		}
     }
 
 	public function index()
 	{
         $data['title'] = 'Dashboard Proposal';
-		$s['mahasiswa'] = $this->Auth_model->mahasiswa();
+		$data['user'] = $this->auth_model->current_user();
         $this->load->view('template_admin/header', $data);
-		$this->load->view('webadmin/dokproposal', $s);
+		$this->load->view('webadmin/dokproposal', $data);
         $this->load->view('template_admin/footer');
 	}
 }

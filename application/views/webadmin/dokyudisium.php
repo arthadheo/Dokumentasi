@@ -13,19 +13,17 @@
 </head>
 <body>
 <div class="container-fluid">
-<?php foreach ($mahasiswa as $mh) { ?>
-<div style="width: 300px; height:100px; padding:15px; background-color:#B1E1FF; box-shadow: 10px 10px;">
-    <div class="d-sm-flex justify-content-between">
-        <h1 class="h5 mb-0 text-gray-800"><?php echo $mh->Nama_mahasiswa; ?></h1>
-    </div>
-    <div class="d-sm-flex justify-content-between">
-        <h1 class="h5 mb-0 text-gray-800"><?php echo $mh->NIM;?></h1>
-    </div>
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h5 mb-0 text-gray-800"><?php echo $mh->Jurusan;?></h1>
-    </div>
-</div>
-<?php } ?>
+	<div style="width: 300px; height:100px; padding:15px; background-color:#B1E1FF; box-shadow: 10px 10px;">
+		<div class="d-sm-flex justify-content-between">
+			<h1 class="h5 mb-0 text-gray-800"><?php echo $user->Nama_mahasiswa; ?></h1>
+		</div>
+		<div class="d-sm-flex justify-content-between">
+			<h1 class="h5 mb-0 text-gray-800"><?php echo $user->NIM;?></h1>
+		</div>
+		<div class="d-sm-flex align-items-center justify-content-between mb-4">
+			<h1 class="h5 mb-0 text-gray-800"><?php echo $user->Jurusan;?></h1>
+		</div>
+	</div>
 <div class="container">
 <div class="row">
 	<div class="col-lg-12">

@@ -63,7 +63,7 @@ $route['dok-yudisium'] = 'DokYudisium/index';
 $route['login'] = 'LoginAdmin/index';
 $route['admin-validasi'] = 'AdminValidasi/index';
 $route['dosenttd'] = 'DosenTtd/index';
-$route['login'] = 'LoginAdmin/login';
-$route['proseslogin'] = 'LoginAdmin/_proseslogin';
+$route['login'] = 'auth/login';
+$route['logout'] = 'auth/logout';
 
 
