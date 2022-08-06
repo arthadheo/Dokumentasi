@@ -27,7 +27,6 @@
     </div>
 </div>
 <div class="container">
-<div class="row">
 	<div class="col-lg-12" style="padding: 35px 10px;">
 		<div class="d-sm-flex justify-content-between">
 			<h6 class="h6 mb-0 text-gray-800">Dheo Artha</h6>
@@ -38,6 +37,7 @@
 		<div class="d-sm-flex align-items-center justify-content-between mb-4">
 			<h6 class="h6 mb-0 text-gray-800">Ilmu Komputer</h6>
 		</div>
+<div class="row" style="padding:5px ;">
 	</div>
 		<div class="main-box clearfix">
             <div>
@@ -49,7 +49,6 @@
 						<tr>
 							<th class="text-center"><span>Judul Dokumen</span></th>
 							<th class="text-center"><span>Deadline</span></th>
-							<th class="text-center"><span>Upload</span></th>
                             <th class="text-center"><span>Download</span></th>
                             <th class="text-center"><span>Send Date</span></th>
                             <th class="text-center"><span>Status</span></th>
@@ -64,9 +63,6 @@
 							</td>
 							<td class="text-center">
 								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile1">
 							</td>
 							<td class="text-center">
                                 <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -105,7 +101,6 @@
 						<tr>
 							<th class="text-center"><span>Judul Dokumen</span></th>
 							<th class="text-center"><span>Deadline</span></th>
-							<th class="text-center"><span>Upload</span></th>
                             <th class="text-center"><span>Download</span></th>
                             <th class="text-center"><span>Send Date</span></th>
                             <th class="text-center"><span>Status</span></th>
@@ -120,9 +115,6 @@
 							</td>
 							<td class="text-center">
 								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile1">
 							</td>
 							<td class="text-center">
                                 <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -683,6 +675,66 @@
 	</div>
 </div>
 </div>
+
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div>
+                <thead><h4  class="text-center">Pilih Dosen Pembimbing</h4></thead>
+            </div>
+            <div class="table-responsive">
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th class="text-center"><span>Pembimbing</span></th>
+							<th class="text-center"><span>Pilih</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                            <td class="text-center">
+								<span class="label label-success">Pembimbing 1</span>
+							</td>
+							<td class="text-center">
+								<form>
+									<select id="dosen1" name="dosen1">
+									<option value="koy">Pak Koy</option>
+									<option value="intan">Bu Intan</option>
+									<option value="randi">Pak Randi</option>
+									</select>
+								</form>
+							</td>
+							<td class="text-center">
+								<button class="btn btn-primary btn-user btn-block" type="submit">Submit</button>
+							</td>
+                        </tr>
+						<tr>
+                            <td class="text-center">
+								<span class="label label-success">Pembimbing 2</span>
+							</td>
+							<td class="text-center">
+								<form>
+									<select id="dosen2" name="dosen2">
+									<option value="au">Pak Koy</option>
+									<option value="ca">Bu Intan</option>
+									<option value="usa">Pak Randi</option>
+									</select>
+								</form>
+							</td>
+							<td class="text-center">
+								<button class="btn btn-primary btn-user btn-block" type="submit">Submit</button>
+							</td>
+                        </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
 </div>
 
 
