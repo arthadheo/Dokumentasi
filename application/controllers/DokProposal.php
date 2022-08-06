@@ -18,11 +18,18 @@ class DokProposal extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Auth_model');
+    }
+
 	public function index()
 	{
-        $data['title'] = 'Dashboard';
-        $this->load->view('template_admin/header');
-		$this->load->view('webadmin/dokproposal');
+        $data['title'] = 'Dashboard Proposal';
+		$s['mahasiswa'] = $this->Auth_model->mahasiswa();
+        $this->load->view('template_admin/header', $data);
+		$this->load->view('webadmin/dokproposal', $s);
         $this->load->view('template_admin/footer');
 	}
 }

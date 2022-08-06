@@ -40,7 +40,7 @@
                                     <div class="text-center">
                                         <h1 class="h2 text-gray-900 mb-4">Masuk</h1>
                                     </div>
-                                    <form method="POST", class="user" action="<?php echo base_url('proseslogin') ?>">
+                                    <form method="POST", class="user" action="<?php echo base_url('webadmin/loginadminsite') ?>">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 name="Email-mahasiwa"
