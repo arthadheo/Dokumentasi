@@ -17,7 +17,7 @@
 <div class="container-fluid">
 <div style="width: 300px; height:100px; padding:15px; background-color:#B1E1FF; box-shadow: 10px 10px;">
     <div class="d-sm-flex justify-content-between">
-        <h1 class="h5 mb-0 text-gray-800">Admin Prodi A</h1>
+        <h1 class="h5 mb-0 text-gray-800">Dosen A</h1>
     </div>
     <div class="d-sm-flex justify-content-between">
         <h1 class="h5 mb-0 text-gray-800">112233</h1>
@@ -53,7 +53,6 @@
                             <th class="text-center"><span>Download</span></th>
                             <th class="text-center"><span>Send Date</span></th>
                             <th class="text-center"><span>Status</span></th>
-							<th class="text-center"><span>Validasi</span></th>
 							<th>&nbsp;</th>
 						</tr>
 					</thead>
@@ -77,10 +76,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak!</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -109,7 +104,6 @@
                             <th class="text-center"><span>Download</span></th>
                             <th class="text-center"><span>Send Date</span></th>
                             <th class="text-center"><span>Status</span></th>
-							<th class="text-center"><span>Validasi</span></th>
 							<th>&nbsp;</th>
 						</tr>
 					</thead>
@@ -133,10 +127,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -165,7 +155,6 @@
                             <th class="text-center"><span>Download</span></th>
                             <th class="text-center"><span>Send Date</span></th>
                             <th class="text-center"><span>Status</span></th>
-							<th class="text-center"><span>Validasi</span></th>
 							<th>&nbsp;</th>
 						</tr>
 					</thead>
@@ -189,10 +178,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -215,10 +200,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -242,10 +223,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -269,10 +246,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -295,10 +268,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -322,10 +291,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -353,7 +318,6 @@
                             <th class="text-center"><span>Download</span></th>
                             <th class="text-center"><span>Send Date</span></th>
                             <th class="text-center"><span>Status</span></th>
-							<th class="text-center"><span>Validasi</span></th>
 							<th>&nbsp;</th>
 						</tr>
 					</thead>
@@ -377,10 +341,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -404,10 +364,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -431,10 +387,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -458,10 +410,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -484,10 +432,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -511,10 +455,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -537,10 +477,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -563,10 +499,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -589,10 +521,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -615,10 +543,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 							</td>
                         </tr>
@@ -641,10 +565,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
@@ -668,10 +588,6 @@
                             <td class="text-center">
                                 <span class="label label-success">In Progress</span>
                             </td>
-							<td class="column text-center">
-								<button type="button" class="btn btn-success">Setuju</button>
-								<button type="button" class="btn btn-danger">Tidak</button>
-							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>

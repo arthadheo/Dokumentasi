@@ -62,6 +62,8 @@ $route['dok-sidang'] = 'DokSidang/index';
 $route['dok-yudisium'] = 'DokYudisium/index';
 $route['login'] = 'LoginAdmin/index';
 $route['admin-validasi'] = 'AdminValidasi/index';
-
+$route['dosenttd'] = 'DosenTtd/index';
+$route['login'] = 'LoginAdmin/login';
+$route['proseslogin'] = 'LoginAdmin/_proseslogin';
 
 

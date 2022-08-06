@@ -14,7 +14,8 @@
     <!-- Custom fonts for this template-->
 </head>
 <body>
-<div style="padding: 24px;">
+<div class="container-fluid">
+<div style="width: 300px; height:100px; padding:15px; background-color:#B1E1FF; box-shadow: 10px 10px;">
     <div class="d-sm-flex justify-content-between">
         <h1 class="h5 mb-0 text-gray-800">Dheo Artha</h1>
     </div>
@@ -24,6 +25,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h5 mb-0 text-gray-800">Ilmu Komputer</h1>
     </div>
+</div>
 <div class="container">
 <div class="row">
 	<div class="col-lg-12">
@@ -65,7 +67,6 @@
                                 <span class="label label-success">In Progress</span>
                             </td>
 							<td>
-								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
                         </tr>
 					</tbody>
@@ -75,7 +76,7 @@
 	</div>
 </div>
 </div>
-
+</div>
 
 
 </body>

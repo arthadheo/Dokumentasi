@@ -40,14 +40,15 @@
                                     <div class="text-center">
                                         <h1 class="h2 text-gray-900 mb-4">Masuk</h1>
                                     </div>
+                                    <form method="POST", class="user" action="<?php echo base_url('proseslogin') ?>">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                name="email_pegawai"
+                                                name="Email-mahasiwa"
                                                 placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                name="password_pegawai" placeholder="Password">
+                                                name="Password-mahasiswa" placeholder="Password">
                                         </div>
                                         <div class="p-t-15">
                                             <button class="btn btn-primary btn-user btn-block" type="submit">Login</button>

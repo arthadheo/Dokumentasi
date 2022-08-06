@@ -2,20 +2,23 @@
 <div class="container-fluid">
 
 <!-- Page Heading -->
-<div class="d-sm-flex justify-content-between">
-    <h1 class="h5 mb-0 text-gray-800">Dosen A</h1>
+<div style="width: 300px; height:100px; padding:15px; background-color:#B1E1FF; box-shadow: 10px 10px;">
+	<div class="d-sm-flex justify-content-between">
+		<h1 class="h5 mb-0 text-gray-800">Dosen A</h1>
+	</div>
+	<div class="d-sm-flex justify-content-between">
+		<h1 class="h5 mb-0 text-gray-800">222333444</h1>
+	</div>
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h5 mb-0 text-gray-800">Ilmu Komputer</h1>
+	</div>
 </div>
-<div class="d-sm-flex justify-content-between">
-    <h1 class="h5 mb-0 text-gray-800">222333444</h1>
-</div>
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h5 mb-0 text-gray-800">Ilmu Komputer</h1>
-</div>
+
 
 
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
+<div class="container" style="padding-top: 3%;">
 <div class="row">
 	<div class="col-lg-12">
 		<div class="main-box clearfix">
@@ -54,17 +57,9 @@
 					</tbody>
 				</table>
 			</div>
-			<ul class="pagination pull-right">
-				<li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-			</ul>
 		</div>
 	</div>
+</div>
 </div>
 </div>
     

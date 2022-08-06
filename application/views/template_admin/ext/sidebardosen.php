@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(); ?>dashboard">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(); ?>dashboard-dosen">
     <div class="sidebar-brand-text">Universitas Pertamina</div>
 </a>
 
@@ -11,7 +11,7 @@
 
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>dashboard-admin">
+    <a class="nav-link" href="<?php echo base_url(); ?>dashboard-dosen">
         <span>Dashboard</span></a>
 </li>
 
@@ -20,22 +20,15 @@
     Menu Pendaftaran
 </div>
 
-<!-- Nav Item - Pages Collapse Menu -->
-
 <!-- Nav Item - Charts -->
 <li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>admin-validasi">
-        <span>Admin Validasi</span></a>
+    <a class="nav-link" href="<?php echo base_url(); ?>dosenttd">
+        <span>Dosen Tanda Tangan</span></a>
 </li>
 
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
-
-<!-- Sidebar Toggler (Sidebar) -->
-
-
-<!-- Sidebar Message -->
 
 </ul>
 <!-- End of Sidebar -->

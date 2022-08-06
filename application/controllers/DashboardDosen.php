@@ -21,7 +21,7 @@ class DashboardDosen extends CI_Controller {
 	public function index()
 	{
         $data['title'] = 'Dashboard';
-        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/headerdosen');
 		$this->load->view('webadmin/dashboarddosen');
         $this->load->view('template_admin/footer');
 	}
