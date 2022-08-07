@@ -366,7 +366,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Berita Acara Seminar Kemajuan</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Transkrip PEM</a>
                                 </td>
                                 <?php if ($dokyudisiumtype5->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -444,7 +444,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Sertifikat TOEFL</a>
                                 </td>
                                 <?php if ($dokyudisiumtype6->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -522,7 +522,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Surat Keterangan Bebas Pustaka</a>
                                 </td>
                                 <?php if ($dokyudisiumtype7->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -600,7 +600,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Surat Keterangan Bebas Aset</a>
                                 </td>
                                 <?php if ($dokyudisiumtype8->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -678,7 +678,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Surat Keterangan Lunas SPP</a>
                                 </td>
                                 <?php if ($dokyudisiumtype9->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -756,7 +756,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Foto Hitam Putih</a>
                                 </td>
                                 <?php if ($dokyudisiumtype10->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -834,7 +834,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Formulir Pendaftaran Yudisium</a>
                                 </td>
                                 <?php if ($dokyudisiumtype11->dokumen_ttd) { ?>
                                     <td class="text-center">
@@ -912,7 +912,7 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Kartu Keluarga</a>
                                 </td>
                                 <?php if ($dokyudisiumtype12->dokumen_ttd) { ?>
                                     <td class="text-center">
