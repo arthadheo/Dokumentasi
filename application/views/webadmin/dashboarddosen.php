@@ -22,35 +22,35 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="main-box clearfix">
-            <div>
+            <div  class="text-center">
                 <thead><h4>Daftar Mahasiswa Ilmu Komputer</h4></thead>
             </div>
 			<div class="table-responsive">
 				<table class="table user-list">
 					<thead>
 						<tr>
-							<th><span>Nama Mahasiswa</span></th>
-							<th><span>Nim</span></th>
+							<th class="text-center"><span>Nama Mahasiswa</span></th>
+							<th class="text-center"><span>Nim</span></th>
 							<th class="text-center"><span>Angkatan</span></th>
-							<th>Action</th>
-							<th>&nbsp;</th>
+							<th class="text-center">Action</th>
+							<th class="text-center">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>
-								<a href="#" class="user-link">George Clooney</a>
+							<td  class="text-center">
+								<span>George Clooney</span>
 							</td>
-							<td>
-								105216035
+							<td  class="text-center">
+								<span>105216035</span>
 							</td>
 							<td class="text-center">
-								<span class="label label-success">2016</span>
+								<span>2016</span>
 							</td>
-							<td style="width: 20%;">
+							<td style="width: 20%;"  class="text-center">
                                 <button type="button" class="btn btn-primary">Lihat</button>
 							</td>
-							<td>
+							<td  class="text-center">
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
 						</tr

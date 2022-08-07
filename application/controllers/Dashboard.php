@@ -17,7 +17,6 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 
-
 		$dokumenProposal = $this->dokumen_model->CountDokumenProposal()*100;
 		$dokumenSeminar = $this->dokumen_model->CountDokumenSeminar()*100;
 		$dokumenSidang = ($this->dokumen_model->CountDokumenSidang()/6)*100;
@@ -27,11 +26,11 @@ class Dashboard extends CI_Controller {
 		$data['dokumenSeminar'] = $dokumenSeminar;
 		$data['dokumenSidang'] = ceil($dokumenSidang);
 		$data['dokumenYudisium'] = ceil($dokumenYudisium);
-
+		
         $data['title'] = 'Dashboard';
 		$data['user'] = $this->auth_model->current_user();
 		$data['mahasiswa'] = $this->mahasiswa_model->getAllData();
-    
+
         $this->load->view('template_admin/header', $data);
 		$this->load->view('webadmin/dashboard', $data);
         $this->load->view('template_admin/footer');

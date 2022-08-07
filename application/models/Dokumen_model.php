@@ -213,7 +213,7 @@ class Dokumen_model extends CI_Model
 	public function CountDokumenProposal()
 	{
 		$data['current_user'] = $this->auth_model->current_user();
-        $nim = isset($data['current_user']->NIM);
+        $nim = $data['current_user']->NIM;
 		$query1 = $this->db->get_where('dokumenproposal', ['nim' => $nim, 'status' => '2']);
     
 		return $query1->num_rows();
@@ -222,7 +222,7 @@ class Dokumen_model extends CI_Model
 	public function CountDokumenSeminar()
 	{
 		$data['current_user'] = $this->auth_model->current_user();
-        $nim = isset($data['current_user']->NIM);
+        $nim = $data['current_user']->NIM;
 		$query1 = $this->db->get_where('dokumenseminarkemajuan', ['nim' => $nim, 'status' => '2']);
     
 		return $query1->num_rows();
@@ -231,8 +231,8 @@ class Dokumen_model extends CI_Model
     public function CountDokumenSidang()
 	{
 		$data['current_user'] = $this->auth_model->current_user();
-        $nim = isset($data['current_user']->NIM);
-		$query1 = $this->db->get_where('dokumensidang', ['nim' => $nim, 'status' => '2']);
+        $nim = $data['current_user']->NIM;
+		$query1 = $this->db->get_where('dokumensidang', ['nim' => $nim, 'status' => '3']);
     
 		return $query1->num_rows();
 	}
@@ -240,8 +240,8 @@ class Dokumen_model extends CI_Model
     public function CountDokumenYudisium()
 	{
 		$data['current_user'] = $this->auth_model->current_user();
-        $nim = isset($data['current_user']->NIM);
-		$query1 = $this->db->get_where('dokumenyudisium', ['nim' => $nim, 'status' => '2']);
+        $nim = $data['current_user']->NIM;
+		$query1 = $this->db->get_where('dokumenyudisium', ['nim' => $nim, 'status' => '3']);
     
 		return $query1->num_rows();
 	}
