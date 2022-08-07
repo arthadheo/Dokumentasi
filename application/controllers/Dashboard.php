@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->model('auth_model');
 		$this->load->model('mahasiswa_model');
+		$this->load->model('dokumen_model');
 		if(!$this->auth_model->current_user()){
 			redirect('login');
 		}
@@ -15,6 +16,18 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
+
+
+		$dokumenProposal = $this->dokumen_model->CountDokumenProposal()*100;
+		$dokumenSeminar = $this->dokumen_model->CountDokumenSeminar()*100;
+		$dokumenSidang = ($this->dokumen_model->CountDokumenSidang()/6)*100;
+		$dokumenYudisium = ($this->dokumen_model->CountDokumenYudisium()/12)*100;
+
+		$data['dokumenProposal'] = $dokumenProposal;
+		$data['dokumenSeminar'] = $dokumenSeminar;
+		$data['dokumenSidang'] = ceil($dokumenSidang);
+		$data['dokumenYudisium'] = ceil($dokumenYudisium);
+
         $data['title'] = 'Dashboard';
 		$data['user'] = $this->auth_model->current_user();
 		$data['mahasiswa'] = $this->mahasiswa_model->getAllData();

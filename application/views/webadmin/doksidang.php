@@ -39,152 +39,480 @@
 						<tr>
 							<th class="text-center"><span>Judul Dokumen</span></th>
 							<th class="text-center"><span>Deadline</span></th>
-							<th class="text-center"><span>Upload</span></th>
-                            <th class="text-center"><span>Download</span></th>
-                            <th class="text-center"><span>Send Date</span></th>
-                            <th class="text-center"><span>Status</span></th>
+							<th class="text-center"><span>File</span></th>
+							<th class="text-center"><span>File Tandatangan</span></th>
+							<th class="text-center"><span>Send Date</span></th>
+							<th class="text-center"><span>Status</span></th>
 							<th>&nbsp;</th>
 						</tr>
-					</thead>
-					<tbody>
-						<tr>
-                            <td class="text-center">
-								<span class="label label-success">Laporan Tugas Akhir</span>
-							</td>
-							<td class="text-center">
-								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile1">
-							</td>
-							<td class="text-center">
-                                <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-							</td>
-                            <td class="text-center">
-                                <span class="label label-success">20/12/2022</span>
-                            </td>
-                            <td class="text-center">
-                                <span class="label label-success">In Progress</span>
-                            </td>
-							<td>
-							</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-								<span class="label label-success">Bukti Bimbingan</span>
-							</td>
-							<td class="text-center">
-								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile2">
-							</td>
-							<td class="text-center">
-                                <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-							</td>
-                            <td class="text-center">
-                                <span class="label label-success">20/12/2022</span>
-                            </td>
-                            <td class="text-center">
-                                <span class="label label-success">In Progress</span>
-                            </td>
-							<td>
-								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
-							</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-								<span class="label label-success">Form Pendaftaran Sidang Tugas Akhir</span>
-							</td>
-							<td class="text-center">
-								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile3">
-							</td>
-							<td class="text-center">
-                                <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-							</td>
-                            <td class="text-center">
-                                <span class="label label-success">20/12/2022</span>
-                            </td>
-                            <td class="text-center">
-                                <span class="label label-success">In Progress</span>
-                            </td>
-							<td>
-								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
-							</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-								<span class="label label-success">Transkrip Mahasiswa</span>
-							</td>
-							<td class="text-center">
-								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile4">
-							</td>
-							<td class="text-center">
-                                <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-							</td>
-                            <td class="text-center">
-                                <span class="label label-success">20/12/2022</span>
-                            </td>
-                            <td class="text-center">
-                                <span class="label label-success">In Progress</span>
-                            </td>
-							<td>
-								
-							</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-								<span class="label label-success">Berita Acara Seminar Kemajuan</span>
-							</td>
-							<td class="text-center">
-								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile4">
-							</td>
-							<td class="text-center">
-                                <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-							</td>
-                            <td class="text-center">
-                                <span class="label label-success">20/12/2022</span>
-                            </td>
-                            <td class="text-center">
-                                <span class="label label-success">In Progress</span>
-                            </td>
-							<td>
-								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
-							</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">
-								<span class="label label-success">Form Keterangan Bebas Pinjam Laboratorium</span>
-							</td>
-							<td class="text-center">
-								<span class="label label-success">25/12/2022</span>
-							</td>
-							<td class="text-center">
-                                <input class="form btn" type="file" id="formFile4">
-							</td>
-							<td class="text-center">
-                                <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-							</td>
-                            <td class="text-center">
-                                <span class="label label-success">20/12/2022</span>
-                            </td>
-                            <td class="text-center">
-                                <span class="label label-success">In Progress</span>
-                            </td>
-							<td>
-								
-							</td>
-                        </tr>
-					</tbody>
+						</thead>
+						<?php if (isset($doksidangtype1)) { ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Laporan Tugas Akhir</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
+                                </td>
+                                <?php if ($doksidangtype1->dokumen_ttd) { ?>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                    </td>
+                                <?php }else{ ?>
+									<td class="text-center">
+										<span class="label label-success">Belum ditandatangi</span>
+									</td>
+                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype1->createDate; ?></span>
+                                </td>
+                                <td class="text-center">
+                                    <?php 
+                                    if ($doksidangtype1->status == 1) {
+                                        $status = "File terupload";
+                                    }elseif ($doksidangtype1->status == 2) {
+                                        $status = "File disetujui";
+                                    }elseif ($doksidangtype1->status == 3) {
+                                        $status = "File ditandatangi";
+                                    }
+                                    ?>
+                                    <span class="label label-success"><?php echo $status ?></span>
+                                </td>
+								<?php if ($doksidangtype1->dokumen_ttd) { ?>
+                                    <td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+									</td>
+                                <?php }else{ ?>
+									<td class="text-center">
+									</td>
+                                <?php } ?>
+                            </tr>
+                        </tbody>
+                    <?php }else{ ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Laporan Tugas Akhir</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td>
+                                    <form method="POST" action="<?php echo base_url('uploadSidang'); ?>/1" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-8"><input type="file" name="file"></div>
+                                            <div class="col-4"><button type="submit">Upload</button></div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">Belum diupload</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+						</tbody>
+					<?php } ?>
+
+					<?php if (isset($doksidangtype2)) { ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Bukti Bimbingan</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen; ?>" download>Bukti Bimbingan</a>
+                                </td>
+                                <?php if ($doksidangtype2->dokumen_ttd) { ?>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                    </td>
+								<?php }else{ ?>
+									<td class="text-center">
+										<span class="label label-success">Belum ditandatangi</span>
+									</td>
+                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype2->createDate; ?></span>
+                                </td>
+                                <td class="text-center">
+                                    <?php 
+                                    if ($doksidangtype2->status == 1) {
+                                        $status = "File terupload";
+                                    }elseif ($doksidangtype2->status == 2) {
+                                        $status = "File disetujui";
+                                    }elseif ($doksidangtype2->status == 3) {
+                                        $status = "File ditandatangi";
+                                    }
+                                    ?>
+                                    <span class="label label-success"><?php echo $status ?></span>
+                                </td>
+                                <?php if ($doksidangtype2->dokumen_ttd) { ?>
+                                    <td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+									</td>
+                                <?php }else{ ?>
+									<td class="text-center">
+									</td>
+                                <?php } ?>
+                            </tr>
+                        </tbody>
+                    <?php }else{ ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Bukti Bimbingan</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td>
+                                    <form method="POST" action="<?php echo base_url('uploadSidang'); ?>/2" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-8"><input type="file" name="file"></div>
+                                            <div class="col-4"><button type="submit">Upload</button></div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">Belum diupload</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+						</tbody>
+					<?php } ?>
+
+					<?php if (isset($doksidangtype3)) { ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Form Pendaftaran Sidang Tugas Akhir</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen; ?>" download>Form Pendaftaran Sidang Tugas Akhir</a>
+                                </td>
+                                <?php if ($doksidangtype3->dokumen_ttd) { ?>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                    </td>
+								<?php }else{ ?>
+									<td class="text-center">
+										<span class="label label-success">Belum ditandatangi</span>
+									</td>
+                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype3->createDate; ?></span>
+                                </td>
+                                <td class="text-center">
+                                    <?php 
+                                    if ($doksidangtype3->status == 1) {
+                                        $status = "File terupload";
+                                    }elseif ($doksidangtype3->status == 2) {
+                                        $status = "File disetujui";
+                                    }elseif ($doksidangtype3->status == 3) {
+                                        $status = "File ditandatangi";
+                                    }
+                                    ?>
+                                    <span class="label label-success"><?php echo $status ?></span>
+                                </td>
+                                <?php if ($doksidangtype3->dokumen_ttd) { ?>
+                                    <td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+									</td>
+                                <?php }else{ ?>
+									<td class="text-center">
+									</td>
+                                <?php } ?>
+                            </tr>
+                        </tbody>
+                    <?php }else{ ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Form Pendaftaran Sidang Tugas Akhir</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td>
+                                    <form method="POST" action="<?php echo base_url('uploadSidang'); ?>/3" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-8"><input type="file" name="file"></div>
+                                            <div class="col-4"><button type="submit">Upload</button></div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">Belum diupload</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+						</tbody>
+					<?php } ?>
+
+					<?php if (isset($doksidangtype4)) { ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Transkrip Mahasiswa</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype4->dokumen; ?>" download>Transkrip Mahasiswa</a>
+                                </td>
+                                <?php if ($doksidangtype4->dokumen_ttd) { ?>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                    </td>
+								<?php }else{ ?>
+									<td class="text-center">
+										<span class="label label-success">Belum ditandatangi</span>
+									</td>
+                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype4->createDate; ?></span>
+                                </td>
+                                <td class="text-center">
+                                    <?php 
+                                    if ($doksidangtype4->status == 1) {
+                                        $status = "File terupload";
+                                    }elseif ($doksidangtype4->status == 2) {
+                                        $status = "File disetujui";
+                                    }elseif ($doksidangtype4->status == 3) {
+                                        $status = "File ditandatangi";
+                                    }
+                                    ?>
+                                    <span class="label label-success"><?php echo $status ?></span>
+                                </td>
+                                <?php if ($doksidangtype4->dokumen_ttd) { ?>
+                                    <td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+									</td>
+                                <?php }else{ ?>
+									<td class="text-center">
+									</td>
+                                <?php } ?>
+                            </tr>
+                        </tbody>
+                    <?php }else{ ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Transkrip Mahasiswa</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td>
+                                    <form method="POST" action="<?php echo base_url('uploadSidang'); ?>/4" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-8"><input type="file" name="file"></div>
+                                            <div class="col-4"><button type="submit">Upload</button></div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">Belum diupload</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+						</tbody>
+					<?php } ?>
+
+					<?php if (isset($doksidangtype5)) { ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Berita Acara Seminar Kemajuan</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen; ?>" download>Berita Acara Seminar Kemajuan</a>
+                                </td>
+                                <?php if ($doksidangtype5->dokumen_ttd) { ?>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                    </td>
+								<?php }else{ ?>
+									<td class="text-center">
+										<span class="label label-success">Belum ditandatangi</span>
+									</td>
+                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype5->createDate; ?></span>
+                                </td>
+                                <td class="text-center">
+                                    <?php 
+                                    if ($doksidangtype5->status == 1) {
+                                        $status = "File terupload";
+                                    }elseif ($doksidangtype5->status == 2) {
+                                        $status = "File disetujui";
+                                    }elseif ($doksidangtype5->status == 3) {
+                                        $status = "File ditandatangi";
+                                    }
+                                    ?>
+                                    <span class="label label-success"><?php echo $status ?></span>
+                                </td>
+                                <?php if ($doksidangtype5->dokumen_ttd) { ?>
+                                    <td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+									</td>
+                                <?php }else{ ?>
+									<td class="text-center">
+									</td>
+                                <?php } ?>
+                            </tr>
+                        </tbody>
+                    <?php }else{ ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Berita Acara Seminar Kemajuan</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td>
+                                    <form method="POST" action="<?php echo base_url('uploadSidang'); ?>/5" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-8"><input type="file" name="file"></div>
+                                            <div class="col-4"><button type="submit">Upload</button></div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">Belum diupload</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+						</tbody>
+					<?php } ?>
+
+					<?php if (isset($doksidangtype6)) { ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Form Keterangan Bebas Pinjam Laboratorium</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td class="text-center">
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype6->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
+                                </td>
+                                <?php if ($doksidangtype6->dokumen_ttd) { ?>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                    </td>
+								<?php }else{ ?>
+									<td class="text-center">
+										<span class="label label-success">Belum ditandatangi</span>
+									</td>
+                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype6->createDate; ?></span>
+                                </td>
+                                <td class="text-center">
+                                    <?php 
+                                    if ($doksidangtype6->status == 1) {
+                                        $status = "File terupload";
+                                    }elseif ($doksidangtype6->status == 2) {
+                                        $status = "File disetujui";
+                                    }elseif ($doksidangtype6->status == 3) {
+                                        $status = "File ditandatangi";
+                                    }
+                                    ?>
+                                    <span class="label label-success"><?php echo $status ?></span>
+                                </td>
+                                <?php if ($doksidangtype6->dokumen_ttd) { ?>
+                                    <td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+									</td>
+                                <?php }else{ ?>
+									<td class="text-center">
+									</td>
+                                <?php } ?>
+                            </tr>
+                        </tbody>
+                    <?php }else{ ?>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <span class="label label-success">Form Keterangan Bebas Pinjam Laboratorium</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">25/12/2022</span>
+                                </td>
+                                <td>
+                                    <form method="POST" action="<?php echo base_url('uploadSidang'); ?>/6" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-8"><input type="file" name="file"></div>
+                                            <div class="col-4"><button type="submit">Upload</button></div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">Belum diupload</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+						</tbody>
+					<?php } ?>
 				</table>
 			</div>
 		</div>

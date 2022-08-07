@@ -16,4 +16,5 @@ class Mahasiswa_model extends CI_Model
     
 		return $query1->result();
 	}
+	
 }

@@ -65,5 +65,9 @@ $route['admin-validasi'] = 'AdminValidasi/index';
 $route['dosenttd'] = 'DosenTtd/index';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
+$route['uploadProposal'] = 'DokProposal/UploadFile';
+$route['uploadSeminar'] = 'DokSeminar/UploadFile';
+$route['uploadSidang/(:num)'] = 'DokSidang/UploadFile/$1';
+$route['uploadYudisium/(:num)'] = 'DokYudisium/UploadFile/$1';
 
 
