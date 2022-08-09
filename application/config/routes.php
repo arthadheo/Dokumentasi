@@ -62,7 +62,7 @@ $route['dok-sidang'] = 'DokSidang/index';
 $route['dok-yudisium'] = 'DokYudisium/index';
 $route['login'] = 'LoginAdmin/index';
 $route['admin-validasi/(:num)'] = 'AdminValidasi/index/$1';
-$route['dosenttd'] = 'DosenTtd/index';
+$route['dosen-validasi/(:num)'] = 'DosenValidasi/index/$1';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 $route['uploadProposal'] = 'DokProposal/UploadFile';
@@ -70,7 +70,9 @@ $route['updateProposal'] = 'DokProposal/UpdateFile';
 $route['uploadSeminar'] = 'DokSeminar/UploadFile';
 $route['updateSeminar'] = 'DokSeminar/UpdateFile';
 $route['uploadSidang/(:num)'] = 'DokSidang/UploadFile/$1';
+$route['updateSidang/(:num)'] = 'DokSidang/UpdateFile/$1';
 $route['uploadYudisium/(:num)'] = 'DokYudisium/UploadFile/$1';
+$route['updateYudisium/(:num)'] = 'DokYudisium/UpdateFile/$1';
 $route['validasiAdmin/(:num)/(:num)/(:num)/(:num)'] = 'AdminValidasi/validasiAdmin/$1/$2/$3/$4';
 
 

@@ -102,4 +102,68 @@ class DokYudisium extends CI_Controller {
 
 		$this->load->view('webadmin/dok-yudisium.php', $data);
 	}
+
+	public function UpdateFile($type)
+	{
+		$data['current_user'] = $this->auth_model->current_user();
+
+		if ($type == 1) {
+			$typenya = "BASidangTugasAkhir";
+		}elseif ($type == 2) {
+			$typenya = "RevisiLaporanTugasAkhir";
+		}elseif ($type == 3) {
+			$typenya = "SuratKeteranganPerbaikanTugasAkhir";
+		}elseif ($type == 4) {
+			$typenya = "TranskripMahasiswa144SKS";
+		}elseif ($type == 5) {
+			$typenya = "TranskripPEM Minimum1300";
+		}elseif ($type == 6) {
+			$typenya = "SertifikatTOEFLMinimum475";
+		}elseif ($type == 7) {
+			$typenya = "SuratKeteranganBebasPustaka";
+		}elseif ($type == 8) {
+			$typenya = "Surat KeteranganBebasAset";
+		}elseif ($type == 9) {
+			$typenya = "SuratKeteranganLunasSPP";
+		}elseif ($type == 10) {
+			$typenya = "FotoHitamPutih4x6";
+		}elseif ($type == 11){
+			$typenya = "FormulirPendaftaranYudisium";
+		}elseif ($type == 12) {
+			$typenya = "KartuKeluarga";
+		}else{
+			$typenya = "Upps..";
+		}
+
+        $fileName = $typenya.'_'.$data['current_user']->NIM.'_'.$data['current_user']->Nama_mahasiswa.'_'.$_FILES['file']['name'].'-update';
+		$config['upload_path'] = './document/yudisium';
+        $config['allowed_types'] = 'jpg|jpeg|png|svg|pdf';
+        $config['file_name'] = $fileName;
+        $config['max_size'] = 3000;
+
+        $this->load->library('upload', $config);
+
+        if($this->upload->do_upload('file1')) {
+
+            $fileData = $this->upload->data();
+
+            $upload = [
+                'dokumen' => $fileData['file_name'],
+                'status' => 5
+            ];
+
+            if($this->dokumen_model->UpdateYudisium($upload, $type)) {
+                $this->session->set_flashdata('success', '<p>Selamat! Anda berhasil mengunggah file <strong>'. $fileData['file_name'] .'</strong></p>');
+            } else {
+                $this->session->set_flashdata('error', '<p>Gagal! File '. $fileData['file_name'] .' tidak berhasil tersimpan di database anda</p>');
+            }
+
+            redirect(base_url('dok-yudisium'));
+        } else {
+            $this->session->set_flashdata('error', $this->upload->display_errors());
+            redirect(base_url('dok-yudisium'));
+        }
+
+		$this->load->view('webadmin/dok-yudisium.php', $data);
+	}
 }

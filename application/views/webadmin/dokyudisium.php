@@ -53,9 +53,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
-                                </td>
+                                <?php if ($dokyudisiumtype1->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/1" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype1->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -69,13 +80,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype1->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype1->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype1->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype1->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype1->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype1->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -131,9 +146,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen; ?>" download>Bukti Bimbingan</a>
-                                </td>
+                                <?php if ($dokyudisiumtype2->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/2" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen; ?>" download>Bukti Bimbingan</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype2->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -147,13 +173,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype2->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype2->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype2->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype2->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype2->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype2->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -209,9 +239,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen; ?>" download>Form Pendaftaran Sidang Tugas Akhir</a>
-                                </td>
+                                <?php if ($dokyudisiumtype3->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/3" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen; ?>" download>Form Pendaftaran Sidang Tugas Akhir</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype3->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -225,13 +266,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype3->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype3->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype3->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype3->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype3->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype3->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -287,9 +332,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype4->dokumen; ?>" download>Transkrip Mahasiswa</a>
-                                </td>
+                                <?php if ($dokyudisiumtype4->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/4" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype4->dokumen; ?>" download>Transkrip Mahasiswa</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype4->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -303,13 +359,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype4->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype4->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype4->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype4->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype4->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype4->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -365,9 +425,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Transkrip PEM</a>
-                                </td>
+                                <?php if ($dokyudisiumtype5->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/5" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Transkrip PEM</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype5->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -381,13 +452,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype5->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype5->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype5->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype5->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype5->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype5->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -443,9 +518,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Sertifikat TOEFL</a>
-                                </td>
+                                <?php if ($dokyudisiumtype6->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/6" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Sertifikat TOEFL</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype6->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -459,13 +545,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype6->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype6->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype6->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype6->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype6->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype6->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -521,9 +611,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Surat Keterangan Bebas Pustaka</a>
-                                </td>
+                                <?php if ($dokyudisiumtype7->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/7" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Surat Keterangan Bebas Pustaka</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype7->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -537,13 +638,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype7->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype7->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype7->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype7->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype7->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype7->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -599,9 +704,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Surat Keterangan Bebas Aset</a>
-                                </td>
+                                <?php if ($dokyudisiumtype8->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/8" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Surat Keterangan Bebas Aset</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype8->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -615,13 +731,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype8->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype8->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype8->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype8->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype8->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype8->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -677,9 +797,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Surat Keterangan Lunas SPP</a>
-                                </td>
+                                <?php if ($dokyudisiumtype9->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/9" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Surat Keterangan Lunas SPP</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype9->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -693,13 +824,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype9->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype9->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype9->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype9->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype9->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype9->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -755,9 +890,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Foto Hitam Putih</a>
-                                </td>
+                                <?php if ($dokyudisiumtype10->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/10" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Foto Hitam Putih</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype10->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -771,13 +917,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype10->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype10->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype10->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype10->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype10->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype10->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -833,9 +983,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Formulir Pendaftaran Yudisium</a>
-                                </td>
+                                <?php if ($dokyudisiumtype11->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/11" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Formulir Pendaftaran Yudisium</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype11->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -849,13 +1010,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype11->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype11->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype11->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype11->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype11->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype11->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -911,9 +1076,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Kartu Keluarga</a>
-                                </td>
+                                <?php if ($dokyudisiumtype12->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateYudisium'); ?>/12" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Kartu Keluarga</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($dokyudisiumtype12->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -927,13 +1103,17 @@
                                     <span class="label label-success"><?php echo $dokyudisiumtype12->createDate; ?></span>
                                 </td>
                                 <td class="text-center">
-                                    <?php 
+                                <?php 
                                     if ($dokyudisiumtype12->status == 1) {
                                         $status = "File terupload";
                                     }elseif ($dokyudisiumtype12->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype12->status == 3) {
                                         $status = "File ditandatangi";
+                                    }elseif ($dokyudisiumtype12->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokyudisiumtype12->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>

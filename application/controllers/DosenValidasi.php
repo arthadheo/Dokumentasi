@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DosenTtd extends CI_Controller {
+class DosenValidasi extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,10 +18,25 @@ class DosenTtd extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('auth_model');
+		$this->load->model('dokumen_model');
+		$this->load->model('mahasiswa_model');
+		$this->load->model('dosen_model');
+		if(!$this->auth_model->current_user()){
+			redirect('login');
+		}
+    }
+
 	public function index()
 	{
-        $this->load->view('template_admin/headerdosen');
-		$this->load->view('webadmin/dosenttd');
+		$data['title'] = 'Dosen Validasi';
+		$data['user'] = $this->auth_model->current_user();
+
+        $this->load->view('template_admin/header');
+		$this->load->view('webadmin/dosenValidasi');
         $this->load->view('template_admin/footer');
 	}
 }

@@ -70,7 +70,7 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokproposal->createDate; ?></span>
                                 </td>
-								<?php  if ($dokproposal->status == 1) { ?>
+								<?php  if ($dokproposal->status == 1 || $dokproposal->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/1/<?php echo $dokproposal->nim ?>/0/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/1/<?php echo $dokproposal->nim ?>/0/4" class="btn btn-danger">Tidak!</a>
@@ -163,7 +163,7 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokseminar->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokseminar->status == 1) { ?>
+                                <?php  if ($dokseminar->status == 1 || $dokseminar->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/2/<?php echo $dokproposal->nim ?>/0/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/2/<?php echo $dokproposal->nim ?>/0/4" class="btn btn-danger">Tidak!</a>
@@ -253,12 +253,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $doksidangtype1->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen; ?>" download>Dokumen Sidang Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype1->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype1->status == 1) { ?>
+                                <?php  if ($doksidangtype1->status == 1 || $doksidangtype1->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype1->nim ?>/1/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype1->nim ?>/1/4" class="btn btn-danger">Tidak!</a>
@@ -313,12 +313,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $doksidangtype2->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen; ?>" download>Bukti Bimbingan</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype2->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype2->status == 1) { ?>
+                                <?php  if ($doksidangtype2->status == 1 || $doksidangtype2->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype2->nim ?>/2/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype2->nim ?>/2/4" class="btn btn-danger">Tidak!</a>
@@ -373,12 +373,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $doksidangtype3->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen; ?>" download>Form Pendaftaran Sidang Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype3->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype3->status == 1) { ?>
+                                <?php  if ($doksidangtype3->status == 1 || $doksidangtype3->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype3->nim ?>/3/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype3->nim ?>/3/4" class="btn btn-danger">Tidak!</a>
@@ -433,12 +433,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $doksidangtype4->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype4->dokumen; ?>" download>Transkrip Mahasiswa</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype4->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype4->status == 1) { ?>
+                                <?php  if ($doksidangtype4->status == 1 || $doksidangtype4->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype4->nim ?>/4/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype4->nim ?>/4/4" class="btn btn-danger">Tidak!</a>
@@ -493,12 +493,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $doksidangtype5->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen; ?>" download>Berita Acara Seminar Kemajuan</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype5->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype5->status == 1) { ?>
+                                <?php  if ($doksidangtype5->status == 1 || $doksidangtype5->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype5->nim ?>/5/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype5->nim ?>/5/4" class="btn btn-danger">Tidak!</a>
@@ -553,12 +553,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $doksidangtype6->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype6->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype6->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype6->status == 1) { ?>
+                                <?php  if ($doksidangtype6->status == 1 || $doksidangtype6->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype6->nim ?>/6/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype6->nim ?>/6/4" class="btn btn-danger">Tidak!</a>
@@ -637,12 +637,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype1->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype1->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype1->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype1->status == 1 || $dokyudisiumtype1->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype1->nim ?>/1/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype1->nim ?>/1/4" class="btn btn-danger">Tidak!</a>
@@ -697,12 +697,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype2->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype2->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype2->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype2->status == 1 || $dokyudisiumtype2->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype2->nim ?>/2/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype2->nim ?>/2/4" class="btn btn-danger">Tidak!</a>
@@ -757,12 +757,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype3->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype3->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype3->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype3->status == 1 || $dokyudisiumtype3->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype3->nim ?>/3/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype3->nim ?>/3/4" class="btn btn-danger">Tidak!</a>
@@ -817,12 +817,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype4->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype4->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype4->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype4->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype4->status == 1 || $dokyudisiumtype4->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype4->nim ?>/4/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype4->nim ?>/4/4" class="btn btn-danger">Tidak!</a>
@@ -877,12 +877,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype5->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype5->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype5->status == 1 || $dokyudisiumtype5->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype5->nim ?>/5/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype5->nim ?>/5/4" class="btn btn-danger">Tidak!</a>
@@ -937,12 +937,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype6->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype6->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype6->status == 1 || $dokyudisiumtype6->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype6->nim ?>/6/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype6->nim ?>/6/4" class="btn btn-danger">Tidak!</a>
@@ -997,12 +997,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype7->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype7->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype7->status == 1 || $dokyudisiumtype7->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype7->nim ?>/7/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype7->nim ?>/7/4" class="btn btn-danger">Tidak!</a>
@@ -1057,12 +1057,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype8->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype8->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype8->status == 1 || $dokyudisiumtype8->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype8->nim ?>/8/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype8->nim ?>/8/4" class="btn btn-danger">Tidak!</a>
@@ -1117,12 +1117,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype9->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype9->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype9->status == 1 || $dokyudisiumtype9->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype9->nim ?>/9/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype9->nim ?>/9/4" class="btn btn-danger">Tidak!</a>
@@ -1177,12 +1177,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype10->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype10->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype10->status == 1 || $dokyudisiumtype10->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype10->nim ?>/10/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype10->nim ?>/10/4" class="btn btn-danger">Tidak!</a>
@@ -1237,12 +1237,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype11->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype11->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype11->status == 1 || $dokyudisiumtype11->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype11->nim ?>/11/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype11->nim ?>/11/4" class="btn btn-danger">Tidak!</a>
@@ -1297,12 +1297,12 @@
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
+                                    <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype12->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype12->status == 1) { ?>
+                                <?php  if ($dokyudisiumtype12->status == 1 || $dokyudisiumtype12->status == 5) { ?>
 									<td class="column text-center">
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype12->nim ?>/12/2" class="btn btn-success">Setuju</a>
 										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype12->nim ?>/12/4" class="btn btn-danger">Tidak!</a>
