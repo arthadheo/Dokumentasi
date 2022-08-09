@@ -16,17 +16,21 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-
-		$dokumenProposal = $this->dokumen_model->CountDokumenProposal()*100;
-		$dokumenSeminar = $this->dokumen_model->CountDokumenSeminar()*100;
-		$dokumenSidang = ($this->dokumen_model->CountDokumenSidang()/6)*100;
-		$dokumenYudisium = ($this->dokumen_model->CountDokumenYudisium()/12)*100;
-
-		$data['dokumenProposal'] = $dokumenProposal;
-		$data['dokumenSeminar'] = $dokumenSeminar;
-		$data['dokumenSidang'] = ceil($dokumenSidang);
-		$data['dokumenYudisium'] = ceil($dokumenYudisium);
+		$level = $this->auth_model->current_user()->level;
 		
+		if ($level == 1) {
+			$nim = $this->auth_model->current_user()->NIM;
+			$dokumenProposal = $this->dokumen_model->CountDokumenProposal($nim)*100;
+			$dokumenSeminar = $this->dokumen_model->CountDokumenSeminar($nim)*100;
+			$dokumenSidang = ($this->dokumen_model->CountDokumenSidang($nim)/6)*100;
+			$dokumenYudisium = ($this->dokumen_model->CountDokumenYudisium($nim)/12)*100;
+
+			$data['dokumenProposal'] = $dokumenProposal;
+			$data['dokumenSeminar'] = $dokumenSeminar;
+			$data['dokumenSidang'] = ceil($dokumenSidang);
+			$data['dokumenYudisium'] = ceil($dokumenYudisium);
+		}
+
         $data['title'] = 'Dashboard';
 		$data['user'] = $this->auth_model->current_user();
 		$data['mahasiswa'] = $this->mahasiswa_model->getAllData();

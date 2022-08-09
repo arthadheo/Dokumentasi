@@ -17,18 +17,19 @@ class DokYudisium extends CI_Controller {
 	{
         $data['title'] = 'Dokumen Yudisium';
 		$data['user'] = $this->auth_model->current_user();
-		$data['dokyudisiumtype1'] = $this->dokumen_model->getDataYudisiumByMahasiswaType1();
-		$data['dokyudisiumtype2'] = $this->dokumen_model->getDataYudisiumByMahasiswaType2();
-		$data['dokyudisiumtype3'] = $this->dokumen_model->getDataYudisiumByMahasiswaType3();
-		$data['dokyudisiumtype4'] = $this->dokumen_model->getDataYudisiumByMahasiswaType4();
-		$data['dokyudisiumtype5'] = $this->dokumen_model->getDataYudisiumByMahasiswaType5();
-		$data['dokyudisiumtype6'] = $this->dokumen_model->getDataYudisiumByMahasiswaType6();
-		$data['dokyudisiumtype7'] = $this->dokumen_model->getDataYudisiumByMahasiswaType7();
-		$data['dokyudisiumtype8'] = $this->dokumen_model->getDataYudisiumByMahasiswaType8();
-		$data['dokyudisiumtype9'] = $this->dokumen_model->getDataYudisiumByMahasiswaType9();
-		$data['dokyudisiumtype10'] = $this->dokumen_model->getDataYudisiumByMahasiswaType10();
-		$data['dokyudisiumtype11'] = $this->dokumen_model->getDataYudisiumByMahasiswaType11();
-		$data['dokyudisiumtype12'] = $this->dokumen_model->getDataYudisiumByMahasiswaType12();
+		$nim = $this->auth_model->current_user()->NIM;
+		$data['dokyudisiumtype1'] = $this->dokumen_model->getDataYudisiumByMahasiswaType1($nim);
+		$data['dokyudisiumtype2'] = $this->dokumen_model->getDataYudisiumByMahasiswaType2($nim);
+		$data['dokyudisiumtype3'] = $this->dokumen_model->getDataYudisiumByMahasiswaType3($nim);
+		$data['dokyudisiumtype4'] = $this->dokumen_model->getDataYudisiumByMahasiswaType4($nim);
+		$data['dokyudisiumtype5'] = $this->dokumen_model->getDataYudisiumByMahasiswaType5($nim);
+		$data['dokyudisiumtype6'] = $this->dokumen_model->getDataYudisiumByMahasiswaType6($nim);
+		$data['dokyudisiumtype7'] = $this->dokumen_model->getDataYudisiumByMahasiswaType7($nim);
+		$data['dokyudisiumtype8'] = $this->dokumen_model->getDataYudisiumByMahasiswaType8($nim);
+		$data['dokyudisiumtype9'] = $this->dokumen_model->getDataYudisiumByMahasiswaType9($nim);
+		$data['dokyudisiumtype10'] = $this->dokumen_model->getDataYudisiumByMahasiswaType10($nim);
+		$data['dokyudisiumtype11'] = $this->dokumen_model->getDataYudisiumByMahasiswaType11($nim);
+		$data['dokyudisiumtype12'] = $this->dokumen_model->getDataYudisiumByMahasiswaType12($nim);
 
         $this->load->view('template_admin/header', $data);
 		$this->load->view('webadmin/dokyudisium', $data);

@@ -16,5 +16,12 @@ class Mahasiswa_model extends CI_Model
     
 		return $query1->result();
 	}
+
+	public function getDataByNim($nim)
+	{
+		$query1 = $this->db->select('*')->from('mahasiswa')->where('nim', $nim)->get();
+    
+		return $query1->row();
+	}
 	
 }

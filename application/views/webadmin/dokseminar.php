@@ -54,9 +54,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/seminar/<?php echo $dokseminar->dokumen; ?>" download>Dokumen Seminar Tugas Akhir</a>
-                                </td>
+                                <?php if ($dokseminar->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateSeminar'); ?>" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/proposal/<?php echo $dokseminar->dokumen; ?>" download>Dokumen Proposal Tugas Akhir</a>
+                                    </td>
+                                <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokseminar->createDate; ?></span>
                                 </td>
@@ -66,8 +77,10 @@
                                         $status = "File terupload";
                                     }elseif ($dokseminar->status == 2) {
                                         $status = "File disetujui";
-                                    }elseif ($dokseminar->status == 3) {
-                                        $status = "File ditandatangi";
+                                    }elseif ($dokseminar->status == 4) {
+                                        $status = "File tidak disetujui";
+                                    }elseif ($dokseminar->status == 5) {
+                                        $status = "File update terupload";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>

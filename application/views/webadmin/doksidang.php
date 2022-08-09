@@ -55,9 +55,20 @@
                                 <td class="text-center">
                                     <span class="label label-success">25/12/2022</span>
                                 </td>
-                                <td class="text-center">
-                                    <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
-                                </td>
+                                <?php if ($doksidangtype1->status == 4) { ?>
+                                    <td>
+                                        <form method="POST" action="<?php echo base_url('updateSidang'); ?>" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-4"><button type="submit">Upload</button></div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                <?php }else { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
+                                    </td>
+                                <?php } ?>
                                 <?php if ($doksidangtype1->dokumen_ttd) { ?>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
@@ -292,15 +303,9 @@
                                 <td class="text-center">
                                     <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype4->dokumen; ?>" download>Transkrip Mahasiswa</a>
                                 </td>
-                                <?php if ($doksidangtype4->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype4->createDate; ?></span>
                                 </td>
@@ -448,15 +453,9 @@
                                 <td class="text-center">
                                     <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype6->dokumen; ?>" download>Form Keterangan Bebas Pinjam Laboratorium</a>
                                 </td>
-                                <?php if ($doksidangtype6->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype6->createDate; ?></span>
                                 </td>

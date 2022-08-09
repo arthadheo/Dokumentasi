@@ -139,7 +139,7 @@
     <div class="col-xl-6 col-lg-7">
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
-            <div
+            <div 
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Dokumen Pengajuan Tugas Akhir</h6>
                 
@@ -245,7 +245,7 @@
 								<span class="label label-success"><?php echo $val->Angkatan ?></span>
 							</td>
 							<td style="width: 20%;">
-                                <button type="button" class="btn btn-primary">Lihat</button>
+                                <a href="<?php echo base_url(); ?>admin-validasi/<?php echo $val->NIM ?>" class="btn btn-primary">Lihat</a>
 							</td>
 							<td>
 								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">

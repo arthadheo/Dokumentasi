@@ -61,13 +61,16 @@ $route['dok-seminar'] = 'DokSeminar/index';
 $route['dok-sidang'] = 'DokSidang/index';
 $route['dok-yudisium'] = 'DokYudisium/index';
 $route['login'] = 'LoginAdmin/index';
-$route['admin-validasi'] = 'AdminValidasi/index';
+$route['admin-validasi/(:num)'] = 'AdminValidasi/index/$1';
 $route['dosenttd'] = 'DosenTtd/index';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 $route['uploadProposal'] = 'DokProposal/UploadFile';
+$route['updateProposal'] = 'DokProposal/UpdateFile';
 $route['uploadSeminar'] = 'DokSeminar/UploadFile';
+$route['updateSeminar'] = 'DokSeminar/UpdateFile';
 $route['uploadSidang/(:num)'] = 'DokSidang/UploadFile/$1';
 $route['uploadYudisium/(:num)'] = 'DokYudisium/UploadFile/$1';
+$route['validasiAdmin/(:num)/(:num)/(:num)/(:num)'] = 'AdminValidasi/validasiAdmin/$1/$2/$3/$4';
 
 

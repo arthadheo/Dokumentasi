@@ -17,12 +17,13 @@ class DokSidang extends CI_Controller {
 	{
         $data['title'] = 'Dokumen Sidang';
 		$data['user'] = $this->auth_model->current_user();
-		$data['doksidangtype1'] = $this->dokumen_model->getDataSidangByMahasiswaType1();
-		$data['doksidangtype2'] = $this->dokumen_model->getDataSidangByMahasiswaType2();
-		$data['doksidangtype3'] = $this->dokumen_model->getDataSidangByMahasiswaType3();
-		$data['doksidangtype4'] = $this->dokumen_model->getDataSidangByMahasiswaType4();
-		$data['doksidangtype5'] = $this->dokumen_model->getDataSidangByMahasiswaType5();
-		$data['doksidangtype6'] = $this->dokumen_model->getDataSidangByMahasiswaType6();
+		$nim = $this->auth_model->current_user()->NIM;
+		$data['doksidangtype1'] = $this->dokumen_model->getDataSidangByMahasiswaType1($nim);
+		$data['doksidangtype2'] = $this->dokumen_model->getDataSidangByMahasiswaType2($nim);
+		$data['doksidangtype3'] = $this->dokumen_model->getDataSidangByMahasiswaType3($nim);
+		$data['doksidangtype4'] = $this->dokumen_model->getDataSidangByMahasiswaType4($nim);
+		$data['doksidangtype5'] = $this->dokumen_model->getDataSidangByMahasiswaType5($nim);
+		$data['doksidangtype6'] = $this->dokumen_model->getDataSidangByMahasiswaType6($nim);
 
         $this->load->view('template_admin/header', $data);
 		$this->load->view('webadmin/doksidang', $data);

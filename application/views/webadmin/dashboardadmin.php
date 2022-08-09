@@ -38,7 +38,7 @@
 					<tbody>
 						<tr>
 							<td  class="text-center">
-								<span>George Clooney</span>
+								<span>Dheo Artha</span>
 							</td>
 							<td  class="text-center">
 								<span>105216035</span>
