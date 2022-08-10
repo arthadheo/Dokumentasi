@@ -120,6 +120,16 @@ class Dokumen_model extends CI_Model
 		
 	}
 
+	public function UpdateTtdSidang($data, $type, $nim)
+	{
+
+		$this->db->where('nim', $nim);
+		$this->db->where('type', $type);
+		
+		$this->db->update('dokumensidang', $data);
+		
+	}
+
     public function getDataYudisiumByMahasiswaType1($nim)
 	{
 		$query1 = $this->db->get_where('dokumenyudisium', ['nim' => $nim, 'type' => 1]);
@@ -212,6 +222,16 @@ class Dokumen_model extends CI_Model
 	public function UpdateYudisium($data, $type)
 	{
 		$nim = $this->auth_model->current_user()->NIM;
+
+		$this->db->where('nim', $nim);
+		$this->db->where('type', $type);
+		
+		$this->db->update('dokumenyudisium', $data);
+		
+	}
+
+	public function UpdateTtdYudisium($data, $type, $nim)
+	{
 
 		$this->db->where('nim', $nim);
 		$this->db->where('type', $type);

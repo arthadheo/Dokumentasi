@@ -83,18 +83,25 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype1->status == 1) { ?>
+								<?php if ($doksidangtype1->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/1/3/<?php echo $mahasiswa->NIM; ?>" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="1" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype1->status == 3) { ?>
+								<?php }elseif ($doksidangtype1->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/1/6/<?php echo $mahasiswa->NIM; ?>" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="1" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
@@ -105,6 +112,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($doksidangtype1->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
@@ -164,20 +175,27 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype2->status == 1) { ?>
+								<?php if ($doksidangtype2->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/2/3" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="2" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
-                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype2->status == 3) { ?>
+								<?php }elseif ($doksidangtype2->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/2/6" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="2" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
-                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
@@ -186,6 +204,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($doksidangtype2->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
@@ -245,20 +267,27 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype3->status == 1) { ?>
+								<?php if ($doksidangtype3->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/3/3" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="3" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
-                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype3->status == 3) { ?>
+								<?php }elseif ($doksidangtype3->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/3/6" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="3" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
-                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
@@ -267,6 +296,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($doksidangtype3->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
@@ -326,20 +359,27 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype5->status == 1) { ?>
+								<?php if ($doksidangtype5->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/5/3" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="5" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
-                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype5->status == 3) { ?>
+								<?php }elseif ($doksidangtype5->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>/5/6" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="5" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
-                                                <div class="col-8"><input type="file" name="file1"></div>
+                                                <div class="col-8"><input type="file" name="file"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
@@ -348,6 +388,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($doksidangtype5->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
@@ -431,18 +475,25 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($dokyudisiumtype1->status == 1) { ?>
+								<?php if ($dokyudisiumtype1->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>/1/3" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="1" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file1"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($dokyudisiumtype1->status == 3) { ?>
+								<?php }elseif ($dokyudisiumtype1->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>/1/6" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="1" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file1"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
@@ -453,6 +504,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>BA Sidang Tugas Akhir - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($dokyudisiumtype1->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
@@ -512,18 +567,25 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($dokyudisiumtype2->status == 1) { ?>
+								<?php if ($dokyudisiumtype2->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>/2/3" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="2" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file1"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($dokyudisiumtype2->status == 3) { ?>
+								<?php }elseif ($dokyudisiumtype2->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>/2/6" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="2" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file1"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
@@ -534,6 +596,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Revisi Laporan Tugas Akhir - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($dokyudisiumtype2->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
@@ -593,18 +659,25 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($dokyudisiumtype3->status == 1) { ?>
+								<?php if ($dokyudisiumtype3->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>/3/3" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="3" name="type">
+                                            <input type="hidden" value="3" name="status">
+
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file1"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($dokyudisiumtype3->status == 3) { ?>
+								<?php }elseif ($dokyudisiumtype3->status == 3 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
-                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>/3/6" enctype="multipart/form-data">
+                                        <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
+                                            <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                            <input type="hidden" value="3" name="type">
+                                            <input type="hidden" value="6" name="status">
                                             <div class="row">
                                                 <div class="col-8"><input type="file" name="file1"></div>
                                                 <div class="col-4"><button type="submit">Upload</button></div>
@@ -615,6 +688,10 @@
 									<td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Surat Keterangan Perbaikan Tugas Akhir - Full Ttd</a>
                                     </td>
+                                <?php }elseif ($dokyudisiumtype3->status == 3 && $anakbimbing->pembimbing == 1) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">Belum ditandatangani pembimbing 2</span>
+									</td>
                                 <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>

@@ -36,6 +36,7 @@ class DosenValidasi extends CI_Controller {
 		$data['user'] = $this->auth_model->current_user();
 
 		$data['mahasiswa'] = $this->mahasiswa_model->getDataByNim($nim);
+		$data['anakbimbing'] = $this->mahasiswa_model->getDataMahasiswaDosenByNim($nim);
 
 		$data['doksidangtype1'] = $this->dokumen_model->getDataSidangByMahasiswaType1($nim);
 		$data['doksidangtype2'] = $this->dokumen_model->getDataSidangByMahasiswaType2($nim);
@@ -51,8 +52,11 @@ class DosenValidasi extends CI_Controller {
         $this->load->view('template_admin/footer');
 	}
 
-	public function UpdateFileTandaTanganSidang($type, $status, $nim)
+	public function UpdateFileTandaTanganSidang()
 	{
+		$type = $_POST['type'];
+		$nim = $_POST['nim'];
+		$status = $_POST['status'];
 
 		if ($type == 1) {
 			$typenya = "LaporanTugasAkhir";
@@ -60,17 +64,13 @@ class DosenValidasi extends CI_Controller {
 			$typenya = "BuktiBimbingan";
 		}elseif ($type == 3) {
 			$typenya = "FormPendaftaranSidangTugasAkhir";
-		}elseif ($type == 4) {
-			$typenya = "TranskripMahasiswa";
 		}elseif ($type == 5) {
 			$typenya = "BeritaAcaraSeminarKemajuan";
-		}elseif ($type == 6) {
-			$typenya = "FormKeteranganBebasPinjamLaboratorium";
 		}else{
 			$typenya = "Upps..";
 		}
 
-        $fileName = $typenya.'_'.$nim.'_'.$_FILES['file']['name'].'-ttd';
+        $fileName = $typenya.'_'.$nim.'-ttd';
 		$config['upload_path'] = './document/sidang';
         $config['allowed_types'] = 'jpg|jpeg|png|svg|pdf';
         $config['file_name'] = $fileName;
@@ -83,22 +83,70 @@ class DosenValidasi extends CI_Controller {
             $fileData = $this->upload->data();
 
             $upload = [
-                'dokumen' => $fileData['file_name'],
+                'dokumen_ttd' => $fileData['file_name'],
                 'status' => $status
             ];
 
-            if($this->dokumen_model->UpdateTtdSidang($upload, $type)) {
+            if($this->dokumen_model->UpdateTtdSidang($upload, $type, $nim)) {
                 $this->session->set_flashdata('success', '<p>Selamat! Anda berhasil mengunggah file <strong>'. $fileData['file_name'] .'</strong></p>');
             } else {
                 $this->session->set_flashdata('error', '<p>Gagal! File '. $fileData['file_name'] .' tidak berhasil tersimpan di database anda</p>');
             }
 
-            redirect(base_url('dok-sidang'));
+            redirect(base_url('dosen-validasi/'.$nim));
         } else {
             $this->session->set_flashdata('error', $this->upload->display_errors());
-            redirect(base_url('dok-sidang'));
+            redirect(base_url('dosen-validasi/'.$nim));
         }
 
-		$this->load->view('webadmin/dosenValidasi.php');
+		redirect('dosen-validasi/'.$nim);
+	}
+
+	public function UpdateFileTandaTanganYudisium()
+	{
+		$type = $_POST['type'];
+		$nim = $_POST['nim'];
+		$status = $_POST['status'];
+
+		if ($type == 1) {
+			$typenya = "BASidangTugasAkhir";
+		}elseif ($type == 2) {
+			$typenya = "RevisiLaporanTugasAkhir";
+		}elseif ($type == 3) {
+			$typenya = "SuratKeteranganPerbaikanTugasAkhir";
+		}else{
+			$typenya = "Upps..";
+		}
+
+        $fileName = $typenya.'_'.$nim.'-ttd';
+		$config['upload_path'] = './document/yudisium';
+        $config['allowed_types'] = 'jpg|jpeg|png|svg|pdf';
+        $config['file_name'] = $fileName;
+        $config['max_size'] = 3000;
+
+        $this->load->library('upload', $config);
+
+        if($this->upload->do_upload('file1')) {
+
+            $fileData = $this->upload->data();
+
+            $upload = [
+                'dokumen_ttd' => $fileData['file_name'],
+                'status' => $status
+            ];
+
+            if($this->dokumen_model->UpdateTtdYudisium($upload, $type, $nim)) {
+                $this->session->set_flashdata('success', '<p>Selamat! Anda berhasil mengunggah file <strong>'. $fileData['file_name'] .'</strong></p>');
+            } else {
+                $this->session->set_flashdata('error', '<p>Gagal! File '. $fileData['file_name'] .' tidak berhasil tersimpan di database anda</p>');
+            }
+
+            redirect(base_url('dosen-validasi/'.$nim));
+        } else {
+            $this->session->set_flashdata('error', $this->upload->display_errors());
+            redirect(base_url('dosen-validasi/'.$nim));
+        }
+
+		redirect('dosen-validasi/'.$nim);
 	}
 }

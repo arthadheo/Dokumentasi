@@ -75,11 +75,11 @@ $route['updateSeminar'] = 'DokSeminar/UpdateFile';
 
 $route['uploadSidang/(:num)'] = 'DokSidang/UploadFile/$1';
 $route['updateSidang/(:num)'] = 'DokSidang/UpdateFile/$1';
-$route['updateTandaTanganSidang/(:num)/(:num)/(:num)'] = 'DosenValidasi/UpdateFileTandaTanganSidang/$1/$2/$3';
+$route['updateTandaTanganSidang'] = 'DosenValidasi/UpdateFileTandaTanganSidang';
 
 $route['uploadYudisium/(:num)'] = 'DokYudisium/UploadFile/$1';
 $route['updateYudisium/(:num)'] = 'DokYudisium/UpdateFile/$1';
-$route['updateTandaTanganYudisium/(:num)/(:num)/(:num)'] = 'DosenValidasi/UpdateFileTandaTanganYudisium/$1/$2/$3';
+$route['updateTandaTanganYudisium'] = 'DosenValidasi/UpdateFileTandaTanganYudisium';
 
 $route['validasiAdmin/(:num)/(:num)/(:num)/(:num)'] = 'AdminValidasi/validasiAdmin/$1/$2/$3/$4';
 
