@@ -91,4 +91,24 @@ class AdminValidasi extends CI_Controller {
 		$this->dokumen_model->validasiDokumen($data);
 		redirect('admin-validasi/'.$nim);
 	}
+
+	public function insertPembimbing1()
+	{
+		$data['nip'] = $_POST['dosbing1'];;
+		$data['nim'] = $_POST['nim'];;
+		$data['pembimbing'] = $_POST['pembimbing'];;
+
+		$this->mahasiswa_model->insertPembimbing($data);
+		redirect('admin-validasi/'.$data['nim']);
+	}
+
+	public function insertPembimbing2()
+	{
+		$data['nip'] = $_POST['dosbing2'];;
+		$data['nim'] = $_POST['nim'];;
+		$data['pembimbing'] = $_POST['pembimbing'];;
+
+		$this->mahasiswa_model->insertPembimbing($data);
+		redirect('admin-validasi/'.$data['nim']);
+	}
 }

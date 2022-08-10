@@ -43,14 +43,14 @@ class Mahasiswa_model extends CI_Model
 		return $query1->row();
 	}
 
-	public function getPembimbing1($nim, $nip){
-		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->join('dosen as d', 'md.nip = d.NIP')->where('md.nip', $nip)->where('md.nim', $nim)->where('md.pembimbing', 1)->get();
+	public function getPembimbing1($nim){
+		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->join('dosen as d', 'md.nip = d.NIP')->where('md.nim', $nim)->where('md.pembimbing', 1)->get();
     
 		return $query1->row();
 	}
 
-	public function getPembimbing2($nim, $nip){
-		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->join('dosen as d', 'md.nip = d.NIP')->where('md.nip', $nip)->where('md.nim', $nim)->where('md.pembimbing', 2)->get();
+	public function getPembimbing2($nim){
+		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->join('dosen as d', 'md.nip = d.NIP')->where('md.nim', $nim)->where('md.pembimbing', 2)->get();
     
 		return $query1->row();
 	}
@@ -59,6 +59,11 @@ class Mahasiswa_model extends CI_Model
 		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->join('dosen as d', 'md.nip = d.NIP')->where('md.nip', $nip)->where('md.nim', $nim)->get();
     
 		return $query1->row();
+	}
+
+	public function insertPembimbing($data)
+	{
+		$this->db->insert('mahasiswadosen', $data); 
 	}
 	
 }

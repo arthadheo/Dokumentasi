@@ -1418,7 +1418,9 @@
 								<span class="label label-success">Pembimbing 1</span>
 							</td>
                             <?php if(!isset($pembimbing1)){ ?>
-                                <form action="" method="post">
+                                <form action="<?php echo base_url('insertPembimbing1'); ?>" method="post">
+                                    <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                    <input type="hidden" value="1" name="pembimbing">
                                     <td class="text-center">
                                         <select name="dosbing1">
                                         <?php foreach ($dosen as $val) { ?>
@@ -1441,7 +1443,9 @@
 								<span class="label label-success">Pembimbing 2</span>
 							</td>
                             <?php if(!isset($pembimbing2)){ ?>
-                                <form action="" method="post">
+                                <form action="<?php echo base_url('insertPembimbing2'); ?>" method="post">
+                                    <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
+                                    <input type="hidden" value="2" name="pembimbing">
                                     <td class="text-center">
                                         <select name="dosbing2">
                                         <?php foreach ($dosen as $val) { ?>

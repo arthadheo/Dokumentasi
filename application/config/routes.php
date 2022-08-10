@@ -83,4 +83,6 @@ $route['updateTandaTanganYudisium'] = 'DosenValidasi/UpdateFileTandaTanganYudisi
 
 $route['validasiAdmin/(:num)/(:num)/(:num)/(:num)'] = 'AdminValidasi/validasiAdmin/$1/$2/$3/$4';
 
+$route['insertPembimbing1'] = 'AdminValidasi/insertPembimbing1';
+$route['insertPembimbing2'] = 'AdminValidasi/insertPembimbing2';
 
