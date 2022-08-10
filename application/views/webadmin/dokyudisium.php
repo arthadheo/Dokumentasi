@@ -67,9 +67,13 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype1->dokumen_ttd) { ?>
+                                <?php if ($dokyudisiumtype1->status == 3) { ?>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - ttd 1</a>
+                                    </td>
+                                <?php }elseif ($dokyudisiumtype1->status == 6) { ?>
+                                    <td class="text-center">    
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - full</a>
                                     </td>
                                 <?php }else{ ?>
 									<td class="text-center">
@@ -86,11 +90,13 @@
                                     }elseif ($dokyudisiumtype1->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype1->status == 3) {
-                                        $status = "File ditandatangi";
+                                        $status = "File ditandatangi pembimbing 1";
                                     }elseif ($dokyudisiumtype1->status == 4) {
                                         $status = "File tidak disetujui";
                                     }elseif ($dokyudisiumtype1->status == 5) {
                                         $status = "File update terupload";
+                                    }elseif ($dokyudisiumtype1->status == 6) {
+                                        $status = "File sudah ditandatangani";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -160,11 +166,15 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen; ?>" download>Bukti Bimbingan</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype2->dokumen_ttd) { ?>
+                                <?php if ($dokyudisiumtype2->status == 3) { ?>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - ttd 1</a>
                                     </td>
-								<?php }else{ ?>
+                                <?php }elseif ($dokyudisiumtype2->status == 6) { ?>
+                                    <td class="text-center">    
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - full</a>
+                                    </td>
+                                <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
@@ -179,11 +189,13 @@
                                     }elseif ($dokyudisiumtype2->status == 2) {
                                         $status = "File disetujui";
                                     }elseif ($dokyudisiumtype2->status == 3) {
-                                        $status = "File ditandatangi";
+                                        $status = "File ditandatangi pembimbing 1";
                                     }elseif ($dokyudisiumtype2->status == 4) {
                                         $status = "File tidak disetujui";
                                     }elseif ($dokyudisiumtype2->status == 5) {
                                         $status = "File update terupload";
+                                    }elseif ($dokyudisiumtype2->status == 6) {
+                                        $status = "File sudah ditandatangani";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
@@ -253,11 +265,15 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen; ?>" download>Form Pendaftaran Sidang Tugas Akhir</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype3->dokumen_ttd) { ?>
+                                <?php if ($dokyudisiumtype3->status == 3) { ?>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - ttd 1</a>
                                     </td>
-								<?php }else{ ?>
+                                <?php }elseif ($dokyudisiumtype3->status == 6) { ?>
+                                    <td class="text-center">    
+                                        <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - full</a>
+                                    </td>
+                                <?php }else{ ?>
 									<td class="text-center">
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
@@ -267,16 +283,18 @@
                                 </td>
                                 <td class="text-center">
                                 <?php 
-                                    if ($dokyudisiumtype3->status == 1) {
+                                    if ($dokyudisiumtype2->status == 1) {
                                         $status = "File terupload";
-                                    }elseif ($dokyudisiumtype3->status == 2) {
+                                    }elseif ($dokyudisiumtype2->status == 2) {
                                         $status = "File disetujui";
-                                    }elseif ($dokyudisiumtype3->status == 3) {
-                                        $status = "File ditandatangi";
-                                    }elseif ($dokyudisiumtype3->status == 4) {
+                                    }elseif ($dokyudisiumtype2->status == 3) {
+                                        $status = "File ditandatangi pembimbing 1";
+                                    }elseif ($dokyudisiumtype2->status == 4) {
                                         $status = "File tidak disetujui";
-                                    }elseif ($dokyudisiumtype3->status == 5) {
+                                    }elseif ($dokyudisiumtype2->status == 5) {
                                         $status = "File update terupload";
+                                    }elseif ($dokyudisiumtype2->status == 6) {
+                                        $status = "File sudah ditandatangani";
                                     }
                                     ?>
                                     <span class="label label-success"><?php echo $status ?></span>
