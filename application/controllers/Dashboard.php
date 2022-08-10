@@ -31,6 +31,10 @@ class Dashboard extends CI_Controller {
 			$data['dokumenYudisium'] = ceil($dokumenYudisium);
 		}
 
+		if($level == 3){
+			$data['anakbimbing'] = $this->mahasiswa_model->getDataMahasiswaDosen();
+		}
+
         $data['title'] = 'Dashboard';
 		$data['user'] = $this->auth_model->current_user();
 		$data['mahasiswa'] = $this->mahasiswa_model->getAllData();

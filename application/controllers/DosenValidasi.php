@@ -30,13 +30,75 @@ class DosenValidasi extends CI_Controller {
 		}
     }
 
-	public function index()
+	public function index($nim)
 	{
 		$data['title'] = 'Dosen Validasi';
 		$data['user'] = $this->auth_model->current_user();
 
-        $this->load->view('template_admin/header');
-		$this->load->view('webadmin/dosenValidasi');
+		$data['mahasiswa'] = $this->mahasiswa_model->getDataByNim($nim);
+
+		$data['doksidangtype1'] = $this->dokumen_model->getDataSidangByMahasiswaType1($nim);
+		$data['doksidangtype2'] = $this->dokumen_model->getDataSidangByMahasiswaType2($nim);
+		$data['doksidangtype3'] = $this->dokumen_model->getDataSidangByMahasiswaType3($nim);
+		$data['doksidangtype5'] = $this->dokumen_model->getDataSidangByMahasiswaType5($nim);
+
+		$data['dokyudisiumtype1'] = $this->dokumen_model->getDataYudisiumByMahasiswaType1($nim);
+		$data['dokyudisiumtype2'] = $this->dokumen_model->getDataYudisiumByMahasiswaType2($nim);
+		$data['dokyudisiumtype3'] = $this->dokumen_model->getDataYudisiumByMahasiswaType3($nim);
+
+        $this->load->view('template_admin/header', $data);
+		$this->load->view('webadmin/dosenValidasi', $data);
         $this->load->view('template_admin/footer');
+	}
+
+	public function UpdateFileTandaTanganSidang($type, $status, $nim)
+	{
+
+		if ($type == 1) {
+			$typenya = "LaporanTugasAkhir";
+		}elseif ($type == 2) {
+			$typenya = "BuktiBimbingan";
+		}elseif ($type == 3) {
+			$typenya = "FormPendaftaranSidangTugasAkhir";
+		}elseif ($type == 4) {
+			$typenya = "TranskripMahasiswa";
+		}elseif ($type == 5) {
+			$typenya = "BeritaAcaraSeminarKemajuan";
+		}elseif ($type == 6) {
+			$typenya = "FormKeteranganBebasPinjamLaboratorium";
+		}else{
+			$typenya = "Upps..";
+		}
+
+        $fileName = $typenya.'_'.$nim.'_'.$_FILES['file']['name'].'-ttd';
+		$config['upload_path'] = './document/sidang';
+        $config['allowed_types'] = 'jpg|jpeg|png|svg|pdf';
+        $config['file_name'] = $fileName;
+        $config['max_size'] = 3000;
+
+        $this->load->library('upload', $config);
+
+        if($this->upload->do_upload('file')) {
+
+            $fileData = $this->upload->data();
+
+            $upload = [
+                'dokumen' => $fileData['file_name'],
+                'status' => $status
+            ];
+
+            if($this->dokumen_model->UpdateTtdSidang($upload, $type)) {
+                $this->session->set_flashdata('success', '<p>Selamat! Anda berhasil mengunggah file <strong>'. $fileData['file_name'] .'</strong></p>');
+            } else {
+                $this->session->set_flashdata('error', '<p>Gagal! File '. $fileData['file_name'] .' tidak berhasil tersimpan di database anda</p>');
+            }
+
+            redirect(base_url('dok-sidang'));
+        } else {
+            $this->session->set_flashdata('error', $this->upload->display_errors());
+            redirect(base_url('dok-sidang'));
+        }
+
+		$this->load->view('webadmin/dosenValidasi.php');
 	}
 }

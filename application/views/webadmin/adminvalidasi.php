@@ -44,7 +44,7 @@
                 <thead><h4  class="text-center" style="padding-bottom:15px;">Dokumen Proposal Tugas Akhir</h4></thead>
             </div>
 			<div class="table-responsive">
-			<table class="table user-list">
+			    <table class="table user-list">
                     <?php if (isset($dokproposal)) { ?>
 					<thead>
 						<tr>

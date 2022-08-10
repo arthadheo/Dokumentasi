@@ -293,30 +293,30 @@
 				<table class="table user-list">
 					<thead>
 						<tr>
-							<th><span>Nama Mahasiswa</span></th>
-							<th><span>Nim</span></th>
+							<th class="text-center"><span>Nama Mahasiswa</span></th>
+							<th class="text-center"><span>Nim</span></th>
 							<th class="text-center"><span>Angkatan</span></th>
-							<th>Action</th>
-							<th>&nbsp;</th>
+							<th class="text-center">Pembimbing</th>
+							<th class="text-center">Action</th>
 						</tr>
 					</thead>
-					<?php foreach($mahasiswa as $val) { ?>
+					<?php foreach($anakbimbing as $val) { ?>
 					<tbody>
 						<tr>
-							<td>
+							<td class="text-center">
 								<a href="#" class="user-link"><?php echo $val->Nama_mahasiswa ?></a>
 							</td>
-							<td>
+							<td class="text-center">
                                 <?php echo $val->NIM ?>
 							</td>
 							<td class="text-center">
 								<span class="label label-success"><?php echo $val->Angkatan ?></span>
 							</td>
-							<td style="width: 20%;">
-                                <button type="button" class="btn btn-primary">Lihat</button>
+                            <td class="text-center">
+                                <?php if ($val->pembimbing == 1) { echo "<span class='label label-success'>Pembimbing 1</span>"; }elseif($val->pembimbing == 2){ echo "<span class='label label-success'>Pembimbing 2</span>"; } ?>
 							</td>
-							<td>
-								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
+							<td class="text-center">
+                                <a href="<?php echo base_url(); ?>dosen-validasi/<?php echo $val->NIM ?>" class="btn btn-primary">Lihat</a>
 							</td>
 						</tr
 					</tbody>
