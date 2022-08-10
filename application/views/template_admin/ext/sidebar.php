@@ -49,18 +49,6 @@
 <hr class="sidebar-divider d-none d-md-block">
 <?php } elseif ($user->level == 2) { ?>
 <?php } elseif ($user->level == 3) { ?>
-<!-- Heading -->
-<div class="sidebar-heading">
-    Menu Pendaftaran
-</div>
-
-<!-- Nav Item - Charts -->
-<li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url(); ?>dosenttd">
-        <span>Dosen Tanda Tangan</span></a>
-</li>
-<!-- Divider -->
-<hr class="sidebar-divider d-none d-md-block">
 <?php } ?>
 
 

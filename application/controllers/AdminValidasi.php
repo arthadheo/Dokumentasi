@@ -37,6 +37,10 @@ class AdminValidasi extends CI_Controller {
 		$data['user'] = $this->auth_model->current_user();
 
 		$data['mahasiswa'] = $this->mahasiswa_model->getDataByNim($nim);
+		$nip = $this->mahasiswa_model->getDataPembimbing1($nim)->nip;
+		$data['pembimbing1'] = $this->mahasiswa_model->getPembimbing1($nim,$nip);
+		$data['pembimbing2'] = $this->mahasiswa_model->getPembimbing2($nim,$nip);
+		
 		$data['dosen'] = $this->dosen_model->getAllData();
 
 		$data['dokproposal'] = $this->dokumen_model->getDataProposalByMahasiswa($nim);

@@ -1417,35 +1417,47 @@
                             <td class="text-center">
 								<span class="label label-success">Pembimbing 1</span>
 							</td>
-							<form>
-								<td class="text-center">
-									<select name="dosbing1">
-									<?php foreach ($dosen as $val) { ?>
-										<option value="<?php echo $val->NIP ?>"><?php echo $val->Nama_dosen ?></option>
-									<?php } ?>
-									</select>
-								</td>
-								<td class="text-center">
-									<button class="btn btn-primary btn-user btn-block" type="submit">Submit</button>
-								</td>
-							</form>
+                            <?php if(!isset($pembimbing1)){ ?>
+                                <form action="" method="post">
+                                    <td class="text-center">
+                                        <select name="dosbing1">
+                                        <?php foreach ($dosen as $val) { ?>
+                                            <option value="<?php echo $val->NIP ?>"><?php echo $val->Nama_dosen ?></option>
+                                        <?php } ?>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">Submit</button>
+                                    </td>
+                                </form>
+                            <?php }else{ ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $pembimbing1->Nama_dosen ?></span>
+                                </td>
+                            <?php } ?>
                         </tr>
 						<tr>
                             <td class="text-center">
 								<span class="label label-success">Pembimbing 2</span>
 							</td>
-							<td class="text-center">
-								<form>
-									<select name="dosbing2">
-									<?php foreach ($dosen as $val) { ?>
-										<option value="<?php echo $val->NIP ?>"><?php echo $val->Nama_dosen ?></option>
-									<?php } ?>
-									</select>
-								</form>
-							</td>
-							<td class="text-center">
-								<button class="btn btn-primary btn-user btn-block" type="submit">Submit</button>
-							</td>
+                            <?php if(!isset($pembimbing2)){ ?>
+                                <form action="" method="post">
+                                    <td class="text-center">
+                                        <select name="dosbing2">
+                                        <?php foreach ($dosen as $val) { ?>
+                                            <option value="<?php echo $val->NIP ?>"><?php echo $val->Nama_dosen ?></option>
+                                        <?php } ?>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">Submit</button>
+                                    </td>
+                                </form>
+                            <?php }else{ ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $pembimbing2->Nama_dosen ?></span>
+                                </td>
+                            <?php } ?>
                         </tr>
 					</tbody>
 				</table>
