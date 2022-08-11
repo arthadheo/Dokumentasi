@@ -55,7 +55,8 @@ class Mahasiswa_model extends CI_Model
 		return $query1->row();
 	}
 
-	public function getDataMahasiswaDosenByNim($nim, $nip){
+	public function getDataMahasiswaDosenByNim($nim){
+		$nip = $this->auth_model->current_user()->NIP;
 		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->join('dosen as d', 'md.nip = d.NIP')->where('md.nip', $nip)->where('md.nim', $nim)->get();
     
 		return $query1->row();
