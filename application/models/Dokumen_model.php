@@ -257,15 +257,15 @@ class Dokumen_model extends CI_Model
 
     public function CountDokumenSidang($nim)
 	{
-		$query1 = $this->db->where('nim', $nim)->where_in('status', array('2','6'))->get('dokumensidang');
+		$query1 = $this->db->where('status', 2)->or_where('status', 6)->where_in('nim', $nim)->get('dokumensidang');
     
 		return $query1->num_rows();
 	}
 
     public function CountDokumenYudisium($nim)
 	{
-		$query1 = $this->db->where('nim', $nim)->where_in('status', array('2','6'))->get('dokumenyudisium');
-    
+		$query1 = $this->db->where('status', 2)->or_where('status', 6)->where_in('nim', $nim)->get('dokumenyudisium');
+		
 		return $query1->num_rows();
 	}
 
