@@ -229,7 +229,6 @@
 							<th><span>Nim</span></th>
 							<th class="text-center"><span>Angkatan</span></th>
 							<th>Action</th>
-							<th>&nbsp;</th>
 						</tr>
 					</thead>
                     <?php foreach($mahasiswa as $val) { ?>
@@ -246,9 +245,6 @@
 							</td>
 							<td style="width: 20%;">
                                 <a href="<?php echo base_url(); ?>admin-validasi/<?php echo $val->NIM ?>" class="btn btn-primary">Lihat</a>
-							</td>
-							<td>
-								<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 							</td>
 						</tr
 					</tbody>
