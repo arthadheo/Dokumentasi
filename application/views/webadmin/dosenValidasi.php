@@ -56,6 +56,7 @@
 							<th class="text-center"><span>Judul Dokumen</span></th>
 							<th class="text-center"><span>Deadline</span></th>
 							<th class="text-center"><span>File</span></th>
+							<th class="text-center"><span>Send Date</span></th>
 							<th class="text-center"><span>File Tandatangan</span></th>
 							<th>&nbsp;</th>
 						</tr>
@@ -82,7 +83,6 @@
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
                                     </td>
                                 <?php } ?>
-
 								<?php if ($doksidangtype1->status == 1 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
@@ -121,6 +121,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype1->createDate ?></span>
+                                </td>
 								<?php if ($doksidangtype1->status == 1 || $doksidangtype1->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -213,6 +216,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype2->createDate ?></span>
+                                </td>
 								<?php if ($doksidangtype2->status == 1 || $doksidangtype2->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -234,6 +240,9 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">File belum di upload</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">-</span>
@@ -305,6 +314,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype3->createDate ?></span>
+                                </td>
 								<?php if ($doksidangtype3->status == 1 || $doksidangtype3->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -326,6 +338,9 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">File belum di upload</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">-</span>
@@ -397,6 +412,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $doksidangtype5->createDate ?></span>
+                                </td>
 								<?php if ($doksidangtype5->status == 1 || $doksidangtype5->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -418,6 +436,9 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">File belum di upload</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">-</span>
@@ -513,6 +534,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $dokyudisiumtype1->createDate ?></span>
+                                </td>
 								<?php if ($dokyudisiumtype1->status == 1 || $dokyudisiumtype1->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -534,6 +558,9 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">File belum di upload</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">-</span>
@@ -605,6 +632,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $dokyudisiumtype2->createDate ?></span>
+                                </td>
 								<?php if ($dokyudisiumtype2->status == 1 || $dokyudisiumtype2->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -626,6 +656,9 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">File belum di upload</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">-</span>
@@ -697,6 +730,9 @@
 										<span class="label label-success">Belum ditandatangi</span>
 									</td>
                                 <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success"><?php echo $dokyudisiumtype3->createDate ?></span>
+                                </td>
 								<?php if ($dokyudisiumtype3->status == 1 || $dokyudisiumtype3->status == 3) { ?>
                                     <td>
 										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
@@ -718,6 +754,9 @@
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">File belum di upload</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-success">-</span>
                                 </td>
                                 <td class="text-center">
                                     <span class="label label-success">-</span>
