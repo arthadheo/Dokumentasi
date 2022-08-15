@@ -1,6 +1,7 @@
 <?php
 
 use LDAP\Result;
+use Illuminate\Database\Eloquent\Model;
 
 defined('BASEPATH') OR exit('No direct script access allowed');
  
@@ -256,14 +257,14 @@ class Dokumen_model extends CI_Model
 
     public function CountDokumenSidang($nim)
 	{
-		$query1 = $this->db->get_where('dokumensidang', ['nim' => $nim, 'status' => '2']);
+		$query1 = $this->db->where('nim', $nim)->where_in('status', array('2','6'))->get('dokumensidang');
     
 		return $query1->num_rows();
 	}
 
     public function CountDokumenYudisium($nim)
 	{
-		$query1 = $this->db->get_where('dokumenyudisium', ['nim' => $nim, 'status' => '2',]);
+		$query1 = $this->db->where('nim', $nim)->where_in('status', array('2','6'))->get('dokumenyudisium');
     
 		return $query1->num_rows();
 	}
