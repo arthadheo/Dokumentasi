@@ -370,8 +370,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype4->createDate; ?></span>
@@ -463,8 +463,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype5->createDate; ?></span>
@@ -556,8 +556,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype6->createDate; ?></span>
@@ -649,8 +649,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype7->createDate; ?></span>
@@ -742,8 +742,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype8->createDate; ?></span>
@@ -835,8 +835,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype9->createDate; ?></span>
@@ -928,8 +928,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype10->createDate; ?></span>
@@ -1021,8 +1021,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype11->createDate; ?></span>
@@ -1114,8 +1114,8 @@
                                     </td>
 								<?php }else{ ?>
 									<td class="text-center">
-										<span class="label label-success">Belum ditandatangi</span>
-									</td>
+                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                    </td>
                                 <?php } ?>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype12->createDate; ?></span>
