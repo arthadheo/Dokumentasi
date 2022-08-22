@@ -26,7 +26,7 @@ class Auth extends CI_Controller
 		if($this->auth_model->login($email, $password)){
 			redirect('dashboard');
 		} else {
-			$this->session->set_flashdata('message_login_error', 'Login Gagal, pastikan email dan passwrod benar!');
+			$this->session->set_flashdata('message_login_error', 'Login Gagal, pastikan email dan password benar!');
 		}
 
 		$this->load->view('webadmin/loginadminsite');

@@ -141,8 +141,8 @@
             <!-- Card Header - Dropdown -->
             <div 
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Dokumen Pengajuan Tugas Akhir</h6>
-                
+                <a class="nav-link m-0 font-weight-bold text-primary" href="<?php echo base_url(); ?>dok-proposal">
+                    <span>Dokumen Proposal Tugas Akhir</span></a>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -156,8 +156,8 @@
             <!-- Card Header - Dropdown -->
             <div
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Dokumen Seminar Kemajuan</h6>
-                
+                <a class="nav-link m-0 font-weight-bold text-primary" href="<?php echo base_url(); ?>dok-seminar">
+                    <span>Dokumen Seminar Kemajuan Tugas Akhir</span></a>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -173,8 +173,8 @@
             <!-- Card Header - Dropdown -->
             <div
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Dokumen Seminar Tugas Akhir</h6>
-                
+                <a class="nav-link m-0 font-weight-bold text-primary" href="<?php echo base_url(); ?>dok-sidang">
+                    <span>Dokumen Sidang Tugas Akhir</span></a>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -188,8 +188,8 @@
             <!-- Card Header - Dropdown -->
             <div
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Dokumen Yudisium</h6>
-                
+                <a class="nav-link m-0 font-weight-bold text-primary" href="<?php echo base_url(); ?>dok-yudisium">
+                    <span>Dokumen Yudisium</span></a>
             </div>
             <!-- Card Body -->
             <div class="card-body">
