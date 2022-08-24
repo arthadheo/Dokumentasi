@@ -6,61 +6,70 @@ class UnitTest extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('dokumen_model');
         $this->load->library('unit_test');
     }
 
-    public function calculatePersentProposal($jumlahdokumen, $totaldokumenterkumpul)
+    public function calculatePersentProposal()
 	{
-		$persentase = ($totaldokumenterkumpul / $jumlahdokumen)*100;
-        return $persentase;
+        $nim = 105216035;
+		$persentaseDokumenProposal = $this->dokumen_model->CountDokumenProposal($nim)*100;
+        return $persentaseDokumenProposal;
 	}
 
     public function testPersentDocumentProposal()
     {
-        $test = $this->calculatePersentProposal(1,1);
-        $expected_result = 100;
+        $test = $this->calculatePersentProposal();
+        echo "Output : ".$test;
+        $expected_result = 'is_numeric';
         $test_name = 'menghitung persentase dokumen proposal';
         echo $this->unit->run($test, $expected_result, $test_name);
     }
 
-    public function calculatePersentSeminar($jumlahdokumen, $totaldokumenterkumpul)
+    public function calculatePersentSeminar()
 	{
-		$persentase = ($totaldokumenterkumpul / $jumlahdokumen)*100;
-        return $persentase;
+        $nim = 105216035;
+		$persentaseDokumenSeminar = $this->dokumen_model->CountDokumenSeminar($nim)*100;
+        return $persentaseDokumenSeminar;
 	}
 
     public function testPersentDocumentSeminar()
     {
-        $test = $this->calculatePersentSeminar(1,1);
-        $expected_result = 1000;
+        $test = $this->calculatePersentSeminar();
+        echo "Output : ".$test;
+        $expected_result = 'is_numeric';
         $test_name = 'menghitung persentase dokumen seminar';
         echo $this->unit->run($test, $expected_result, $test_name);
     }
 
-	public function calculatePersentSidang($jumlahdokumen, $totaldokumenterkumpul)
+	public function calculatePersentSidang()
 	{
-		$persentase = ($totaldokumenterkumpul / $jumlahdokumen)*100;
-        return $persentase;
+        $nim = 105216035;
+		$persentaseDokumenSidang = ($this->dokumen_model->CountDokumenSidang($nim)/6)*100;
+        return $persentaseDokumenSidang;
 	}
 
     public function testPersentDocumentSidang()
     {
-        $test = $this->calculatePersentSidang(3,6);
-        $expected_result = 50;
+        $test = $this->calculatePersentSidang();
+        echo "Output : ".$test;
+        $expected_result = 'is_numeric';
         $test_name = 'menghitung persentase dokumen sidang';
         echo $this->unit->run($test, $expected_result, $test_name);
     }
 
-    public function calculatePersentYudisium($jumlahdokumen, $totaldokumenterkumpul)
+    public function calculatePersentYudisium()
 	{
-		$persentase = ($totaldokumenterkumpul / $jumlahdokumen)*100;
-        return $persentase;
+        $nim = 105216035;
+		$persentaseDokumenYudisium = ($this->dokumen_model->CountDokumenYudisium($nim)/12)*100;
+        return $persentaseDokumenYudisium;
 	}
 
     public function testPersentDocumentYudisium()
     {
-        $test = $this->calculatePersentYudisium(6,12);
-        $expected_result = 50;
+        $test = $this->calculatePersentYudisium();
+        echo "Output : ".$test;
+        $expected_result = 'is_numeric';
         $test_name = 'menghitung persentase dokumen yudisium';
         echo $this->unit->run($test, $expected_result, $test_name);
     }
