@@ -364,15 +364,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype4->dokumen; ?>" download>Transkrip Mahasiswa</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype4->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype4->createDate; ?></span>
                                 </td>
@@ -457,15 +451,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype5->dokumen; ?>" download>Transkrip PEM</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype5->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype5->createDate; ?></span>
                                 </td>
@@ -550,15 +538,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype6->dokumen; ?>" download>Sertifikat TOEFL</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype6->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype6->createDate; ?></span>
                                 </td>
@@ -643,15 +625,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype7->dokumen; ?>" download>Surat Keterangan Bebas Pustaka</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype7->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype7->createDate; ?></span>
                                 </td>
@@ -736,15 +712,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype8->dokumen; ?>" download>Surat Keterangan Bebas Aset</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype8->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype8->createDate; ?></span>
                                 </td>
@@ -829,15 +799,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype9->dokumen; ?>" download>Surat Keterangan Lunas SPP</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype9->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype9->createDate; ?></span>
                                 </td>
@@ -922,15 +886,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype10->dokumen; ?>" download>Foto Hitam Putih</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype10->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype10->createDate; ?></span>
                                 </td>
@@ -1015,15 +973,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype11->dokumen; ?>" download>Formulir Pendaftaran Yudisium</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype11->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype11->createDate; ?></span>
                                 </td>
@@ -1108,15 +1060,9 @@
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype12->dokumen; ?>" download>Kartu Keluarga</a>
                                     </td>
                                 <?php } ?>
-                                <?php if ($dokyudisiumtype12->dokumen_ttd) { ?>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Download</button>
-                                    </td>
-								<?php }else{ ?>
-									<td class="text-center">
-                                        <span class="label label-success">File tidak perlu tanda tangan dosen</span>
-                                    </td>
-                                <?php } ?>
+                                <td class="text-center">
+                                    <span class="label label-success">File tidak perlu tanda tangan dosen</span>
+                                </td>
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype12->createDate; ?></span>
                                 </td>

@@ -56,8 +56,8 @@
 							<th class="text-center"><span>Judul Dokumen</span></th>
 							<th class="text-center"><span>Deadline</span></th>
 							<th class="text-center"><span>File</span></th>
-							<th class="text-center"><span>Send Date</span></th>
 							<th class="text-center"><span>File Tandatangan</span></th>
+							<th class="text-center"><span>Send Date</span></th>
 							<th>&nbsp;</th>
 						</tr>
 						</thead>

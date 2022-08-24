@@ -256,7 +256,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen_ttd; ?>" download>Dokumen Sidang Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype1->status == 6) { ?>
+                                <?php }elseif ($doksidangtype1->status == 6 || $doksidangtype1->status == 2 || $doksidangtype1->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen_ttd; ?>" download>Dokumen Sidang Tugas Akhir - ttd 2</a>
                                     </td>
@@ -268,13 +268,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype1->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype1->status == 3) { ?>
+                                <?php  if ($doksidangtype1->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($doksidangtype1->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($doksidangtype1->status == 6) { ?>
+                                <?php  }elseif ($doksidangtype1->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($doksidangtype1->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype1->nim ?>/1/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype1->nim ?>/1/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
@@ -322,7 +334,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype2->status == 6) { ?>
+                                <?php }elseif ($doksidangtype2->status == 6 || $doksidangtype2->status == 2 || $doksidangtype2->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - ttd 2</a>
                                     </td>
@@ -334,13 +346,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype2->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype2->status == 3) { ?>
+                                <?php  if ($doksidangtype2->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($doksidangtype2->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($doksidangtype2->status == 6) { ?>
+                                <?php  }elseif ($doksidangtype2->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($doksidangtype2->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype2->nim ?>/2/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype2->nim ?>/2/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
@@ -388,7 +412,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype3->status == 6) { ?>
+                                <?php }elseif ($doksidangtype3->status == 6 || $doksidangtype3->status == 2 || $doksidangtype3->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - ttd 2</a>
                                     </td>
@@ -400,13 +424,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype3->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype3->status == 3) { ?>
+                                <?php  if ($doksidangtype3->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($doksidangtype3->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($doksidangtype3->status == 6) { ?>
+                                <?php  }elseif ($doksidangtype3->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($doksidangtype3->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype3->nim ?>/3/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype3->nim ?>/3/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
@@ -514,7 +550,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype5->status == 6) { ?>
+                                <?php }elseif ($doksidangtype5->status == 6 || $doksidangtype5->status == 2 || $doksidangtype5->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - ttd 2</a>
                                     </td>
@@ -526,13 +562,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $doksidangtype5->createDate; ?></span>
                                 </td>
-                                <?php  if ($doksidangtype5->status == 3) { ?>
+                                <?php  if ($doksidangtype5->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($doksidangtype5->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($doksidangtype5->status == 6) { ?>
+                                <?php  }elseif ($doksidangtype5->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($doksidangtype5->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype5->nim ?>/5/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/3/<?php echo $doksidangtype5->nim ?>/5/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
@@ -664,7 +712,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($dokyudisiumtype1->status == 6) { ?>
+                                <?php }elseif ($dokyudisiumtype1->status == 6 || $dokyudisiumtype1->status == 2 || $dokyudisiumtype1->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - ttd 2</a>
                                     </td>
@@ -676,13 +724,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype1->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype1->status == 3) { ?>
+                                <?php  if ($dokyudisiumtype1->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($dokyudisiumtype1->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($dokyudisiumtype1->status == 6) { ?>
+                                <?php  }elseif ($dokyudisiumtype1->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($dokyudisiumtype1->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype1->nim ?>/1/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype1->nim ?>/1/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
@@ -730,7 +790,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Revisi Laporan Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($dokyudisiumtype2->status == 6) { ?>
+                                <?php }elseif ($dokyudisiumtype2->status == 6 || $dokyudisiumtype2->status == 2 || $dokyudisiumtype2->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Revisi Laporan Tugas Akhir - ttd 2</a>
                                     </td>
@@ -742,13 +802,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype2->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype2->status == 3) { ?>
+                                <?php  if ($dokyudisiumtype2->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($dokyudisiumtype2->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($dokyudisiumtype2->status == 6) { ?>
+                                <?php  }elseif ($dokyudisiumtype2->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($dokyudisiumtype2->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype2->nim ?>/2/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype2->nim ?>/2/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
@@ -796,7 +868,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Surat Keterangan Perbaikan Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($dokyudisiumtype3->status == 6) { ?>
+                                <?php }elseif ($dokyudisiumtype3->status == 6 || $dokyudisiumtype3->status == 2 || $dokyudisiumtype3->status == 4) { ?>
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Surat Keterangan Perbaikan Tugas Akhir - ttd 2</a>
                                     </td>
@@ -808,13 +880,25 @@
                                 <td class="text-center">
                                     <span class="label label-success"><?php echo $dokyudisiumtype3->createDate; ?></span>
                                 </td>
-                                <?php  if ($dokyudisiumtype3->status == 3) { ?>
+                                <?php  if ($dokyudisiumtype3->status == 2) { ?>
+                                    <td class="text-center">
+										<span class="label label-success">File disetujui</span>
+									</td>
+                                <?php  }elseif ($dokyudisiumtype3->status == 3) { ?>
                                     <td class="text-center">
 										<span class="label label-success">File ditandatangani pembimbing 1</span>
 									</td>
-                                <?php }elseif ($dokyudisiumtype3->status == 6) { ?>
+                                <?php  }elseif ($dokyudisiumtype3->status == 4) { ?>
                                     <td class="text-center">
-										<span class="label label-success">File sudah ditandatangani</span>
+										<span class="label label-success">File tidak disetujui</span>
+									</td>
+                                <?php }elseif ($dokyudisiumtype3->status == 6) { ?>
+                                    <td class="column text-center">
+										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype3->nim ?>/3/2" class="btn btn-success">Setuju</a>
+										<a href="<?php echo base_url(); ?>validasiAdmin/4/<?php echo $dokyudisiumtype3->nim ?>/3/4" class="btn btn-danger">Tidak!</a>
+									</td>
+									<td>
+										<img src="<?php echo base_url(); ?>assets_admin/img/bell-fill.svg" alt="Notifikasi">
 									</td>
 								<?php }else { ?>
                                     <td class="text-center">
