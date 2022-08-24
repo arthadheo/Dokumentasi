@@ -71,7 +71,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($dokyudisiumtype1->status == 6) { ?>
+                                <?php }elseif ($dokyudisiumtype1->status == 6 || $dokyudisiumtype1->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - full</a>
                                     </td>
@@ -170,7 +170,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($dokyudisiumtype2->status == 6) { ?>
+                                <?php }elseif ($dokyudisiumtype2->status == 6 || $dokyudisiumtype2->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - full</a>
                                     </td>
@@ -269,7 +269,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($dokyudisiumtype3->status == 6) { ?>
+                                <?php }elseif ($dokyudisiumtype3->status == 6 || $dokyudisiumtype3->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/yudisium/<?php echo $dokyudisiumtype3->dokumen_ttd; ?>" download>Form Pendaftaran Sidang Tugas Akhir - full</a>
                                     </td>

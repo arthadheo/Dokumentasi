@@ -73,7 +73,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype1->status == 6) { ?>
+                                <?php }elseif ($doksidangtype1->status == 6 || $doksidangtype1->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen_ttd; ?>" download>Laporan Tugas Akhir - full</a>
                                     </td>
@@ -172,7 +172,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype2->status == 6) { ?>
+                                <?php }elseif ($doksidangtype2->status == 6 || $doksidangtype2->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype2->dokumen_ttd; ?>" download>Bukti Bimbingan - full</a>
                                     </td>
@@ -271,7 +271,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen_ttd; ?>" download>Bukti Bimbingan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype3->status == 6) { ?>
+                                <?php }elseif ($doksidangtype3->status == 6 || $doksidangtype3->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype3->dokumen_ttd; ?>" download>Bukti Bimbingan - full</a>
                                     </td>
@@ -457,7 +457,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - ttd 1</a>
                                     </td>
-                                <?php }elseif ($doksidangtype5->status == 6) { ?>
+                                <?php }elseif ($doksidangtype5->status == 6 || $doksidangtype5->status == 4) { ?>
                                     <td class="text-center">    
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype5->dokumen_ttd; ?>" download>Berita Acara Seminar Kemajuan - full</a>
                                     </td>
