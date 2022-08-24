@@ -37,12 +37,8 @@ class AdminValidasi extends CI_Controller {
 		$data['user'] = $this->auth_model->current_user();
 
 		$data['mahasiswa'] = $this->mahasiswa_model->getDataByNim($nim);
-		$datarelasi = $this->mahasiswa_model->getDataPembimbing1($nim);
-		if (isset($datarelasi)) {
-			$nip = $datarelasi->nip;
-			$data['pembimbing1'] = $this->mahasiswa_model->getPembimbing1($nim,$nip);
-			$data['pembimbing2'] = $this->mahasiswa_model->getPembimbing2($nim,$nip);
-		}
+		$data['pembimbing1'] = $this->mahasiswa_model->getPembimbing1($nim);
+		$data['pembimbing2'] = $this->mahasiswa_model->getPembimbing2($nim);
 		
 		$data['dosen'] = $this->dosen_model->getAllData();
 
@@ -97,21 +93,39 @@ class AdminValidasi extends CI_Controller {
 
 	public function insertPembimbing1()
 	{
-		$data['nip'] = $_POST['dosbing1'];;
-		$data['nim'] = $_POST['nim'];;
-		$data['pembimbing'] = $_POST['pembimbing'];;
+		$nip = $_POST['dosbing1'];
+		$nim = $_POST['nim'];
+		$pembimbing= $_POST['pembimbing'];
 
-		$this->mahasiswa_model->insertPembimbing($data);
-		redirect('admin-validasi/'.$data['nim']);
+		$pembimbing1 = $this->mahasiswa_model->getDataPembimbing($nim,$nip);
+
+		if ($pembimbing1 == NULL) {
+			$data['nip'] = $nip;
+			$data['nim'] = $nim;
+			$data['pembimbing'] = $pembimbing;
+			$this->mahasiswa_model->insertPembimbing($data);
+			redirect('admin-validasi/'.$nim);	
+		}else{
+			redirect('admin-validasi/'.$nim);	
+		}
 	}
 
 	public function insertPembimbing2()
 	{
-		$data['nip'] = $_POST['dosbing2'];;
-		$data['nim'] = $_POST['nim'];;
-		$data['pembimbing'] = $_POST['pembimbing'];;
+		$nip = $_POST['dosbing2'];
+		$nim = $_POST['nim'];
+		$pembimbing= $_POST['pembimbing'];
 
-		$this->mahasiswa_model->insertPembimbing($data);
-		redirect('admin-validasi/'.$data['nim']);
+		$pembimbing1 = $this->mahasiswa_model->getDataPembimbing($nim,$nip);
+
+		if ($pembimbing1 == NULL) {
+			$data['nip'] = $nip;
+			$data['nim'] = $nim;
+			$data['pembimbing'] = $pembimbing;
+			$this->mahasiswa_model->insertPembimbing($data);
+			redirect('admin-validasi/'.$nim);	
+		}else{
+			redirect('admin-validasi/'.$nim);	
+		}
 	}
 }

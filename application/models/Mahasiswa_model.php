@@ -31,16 +31,10 @@ class Mahasiswa_model extends CI_Model
 		return $query1->result();
 	}
 
-	public function getDataPembimbing($nim){
-		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->where('md.nim', $nim)->get();
+	public function getDataPembimbing($nim,$nip){
+		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->where('md.nim', $nim)->where('md.nip', $nip)->get();
     
 		return $query1->result();
-	}
-
-	public function getDataPembimbing1($nim){
-		$query1 = $this->db->select('*')->from('mahasiswadosen as md')->join('mahasiswa as m', 'md.nim = m.NIM')->where('md.nim', $nim)->get();
-    
-		return $query1->row();
 	}
 
 	public function getPembimbing1($nim){
