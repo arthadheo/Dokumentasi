@@ -83,7 +83,7 @@
                                         <a href="<?php echo base_url(); ?>document/sidang/<?php echo $doksidangtype1->dokumen; ?>" download>Laporan Tugas Akhir</a>
                                     </td>
                                 <?php } ?>
-								<?php if ($doksidangtype1->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($doksidangtype1->status == 1 && $anakbimbing->pembimbing == 1 || $doksidangtype1->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -96,7 +96,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype1->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($doksidangtype1->status == 3 && $anakbimbing->pembimbing == 2 || $doksidangtype1->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -178,7 +178,7 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype2->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($doksidangtype2->status == 1 && $anakbimbing->pembimbing == 1 || $doksidangtype2->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -191,7 +191,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype2->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($doksidangtype2->status == 3 && $anakbimbing->pembimbing == 2 || $doksidangtype2->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -276,7 +276,7 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype3->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($doksidangtype3->status == 1 && $anakbimbing->pembimbing == 1 || $doksidangtype3->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -289,7 +289,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype3->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($doksidangtype3->status == 3 && $anakbimbing->pembimbing == 2 || $doksidangtype3->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -374,7 +374,7 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($doksidangtype5->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($doksidangtype5->status == 1 && $anakbimbing->pembimbing == 1 || $doksidangtype5->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -387,7 +387,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($doksidangtype5->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($doksidangtype5->status == 3 && $anakbimbing->pembimbing == 2 || $doksidangtype5->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganSidang'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -470,6 +470,7 @@
 							<th class="text-center"><span>Deadline</span></th>
 							<th class="text-center"><span>File</span></th>
 							<th class="text-center"><span>File Tandatangan</span></th>
+							<th class="text-center"><span>Send Date</span></th>
 							<th>&nbsp;</th>
 						</tr>
 						</thead>
@@ -496,7 +497,7 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($dokyudisiumtype1->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($dokyudisiumtype1->status == 1 && $anakbimbing->pembimbing == 1 || $dokyudisiumtype1->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -509,7 +510,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($dokyudisiumtype1->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($dokyudisiumtype1->status == 3 && $anakbimbing->pembimbing == 2 || $dokyudisiumtype1->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -594,7 +595,7 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($dokyudisiumtype2->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($dokyudisiumtype2->status == 1 && $anakbimbing->pembimbing == 1 || $dokyudisiumtype2->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -607,7 +608,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($dokyudisiumtype2->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($dokyudisiumtype2->status == 3 && $anakbimbing->pembimbing == 2 || $dokyudisiumtype2->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -692,7 +693,7 @@
                                     </td>
                                 <?php } ?>
 
-								<?php if ($dokyudisiumtype3->status == 1 && $anakbimbing->pembimbing == 1) { ?>
+								<?php if ($dokyudisiumtype3->status == 1 && $anakbimbing->pembimbing == 1 || $dokyudisiumtype3->status == 5 && $anakbimbing->pembimbing == 1) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
@@ -705,7 +706,7 @@
                                             </div>
                                         </form>
                                     </td>
-								<?php }elseif ($dokyudisiumtype3->status == 3 && $anakbimbing->pembimbing == 2) { ?>
+								<?php }elseif ($dokyudisiumtype3->status == 3 && $anakbimbing->pembimbing == 2 || $dokyudisiumtype3->status == 5 && $anakbimbing->pembimbing == 2) { ?>
 									<td>
                                         <form method="POST" action="<?php echo base_url('updateTandaTanganYudisium'); ?>" enctype="multipart/form-data">
                                             <input type="hidden" value="<?php echo $mahasiswa->NIM; ?>" name="nim">
